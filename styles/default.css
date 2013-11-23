@@ -1,0 +1,61 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+body {
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #efefef;
+}
+
+a {
+    color: #0066cc;
+}
+
+a:visited {
+    color: #6600cc;
+}
+
+a:hover {
+    color: #cc6600;
+}
+
+a:active {
+    color: #cc0000;
+}
+
+
+h1 {
+    margin: 0 0 0.5em 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 200%;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+h1 a:visited,
+h1 a:hover,
+h1 a:active {
+    color: #333333;
+}
+
+em {
+    color: #cc0000;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0.5em;
+}
+
+li:first-letter {
+    color: #cc0000;
+}
+
