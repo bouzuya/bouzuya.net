@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-        <link rel="icon" type="image/png" href="/images/favicon.png" />
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:800" />
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Share+Tech+Mono" />
-        <link rel="stylesheet" type="text/css" href="/styles/default.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="/styles/smartphone.css" media="only screen and (max-device-width: 480px)" />
-        <title>bouzuya.net</title>
-    </head>
-    <body>
-        <h1><a accesskey="u" href="/">bo<em>u</em>zuya</a></h1>
-        <ul>
-            <li><a accesskey="b" href="http://blog.bouzuya.net" title="blog.bouzuya.net"><em>b</em>log.bouzuya.net</a></li>
-            <li><a accesskey="t" href="https://twitter.com/bouzuya/" title="twitter.com/bouzuya"><em>t</em>witter.com/bouzuya</a></li>
-            <li><a accesskey="h" href="http://hatena.ne.jp/bouzuya/" title="hatena.ne.jp/bouzuya"><em>h</em>atena.ne.jp/bouzuya</a></li>
-            <li><a accesskey="g" href="https://github.com/bouzuya/" title="github.com/bouzuya"><em>g</em>ithub.com/bouzuya</a></li>
-        </ul>
-        <section class="works">
-            <h2>works</h2>
-            <ul>
-                <li><a accesskey="l" href="http://bwilike.me">bwi<em>l</em>ike.me</a></li>
-            </ul>
-        </section>
-        <!-- google-analytics -->
-        <script type="text/javascript">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta property="og:title" content="bouzuya.net" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/images/bouzuya-200x200.png" />
+<meta property="og:description" content="bouzuya's web site." />
+<meta property="og:url" content="http://bouzuya.net/" />
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:800" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Share+Tech+Mono" />
+<link rel="stylesheet" type="text/css" href="/styles/default.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/styles/smartphone.css" media="only screen and (max-device-width: 480px)" />
+<title>bouzuya.net</title>
+</head>
+<body>
+<section id="header">
+  <h1><a accesskey="u" href="/">bo<em>u</em>zuya</a></h1>
+</section>
+<section id="body">
+  <h1>links</h1>
+  <section>
+    <h1>works</h1>
+    <ul>
+      <li><a accesskey="b" href="http://blog.bouzuya.net" title="blog.bouzuya.net"><em>b</em>log.bouzuya.net</a></li>
+      <li><a accesskey="l" href="http://bwilike.me" title="bwilike.me">bwi<em>l</em>ike.me</a></li>
+    </ul>
+  </section>
+  <section>
+    <h1>SNS</h1>
+    <ul>
+      <li><a accesskey="t" href="https://twitter.com/bouzuya/" title="twitter.com/bouzuya"><em>t</em>witter.com/bouzuya</a></li>
+      <li><a accesskey="h" href="http://hatena.ne.jp/bouzuya/" title="hatena.ne.jp/bouzuya"><em>h</em>atena.ne.jp/bouzuya</a></li>
+      <li><a accesskey="g" href="https://github.com/bouzuya/" title="github.com/bouzuya"><em>g</em>ithub.com/bouzuya</a></li>
+    </ul>
+  </section>
+</section>
+<section id="footer">
+  <h1>footer</h1>
+  <address><a href="https://twitter.com/bouzuya/">@bouzuya</a></address>
+</section>
 
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-29242739-1']);
-            _gaq.push(['_trackPageview']);
+<!-- google-analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-29242739-1']);
+_gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+</script>
+<!-- /google-analytics -->
 
-        </script>
-        <!-- /google-analytics -->
-    </body>
+</body>
 </html>
 

@@ -1,49 +1,73 @@
 body {
-    font-family: 'Share Tech Mono', sans-serif;
-    font-size: 48px;
-    font-weight: bold;
-    color: #333333;
-    background-color: #efefef;
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333333;
+  background-color: #efefef;
 }
 
 a {
-    color: #0066cc;
+  color: #0066cc;
 }
 
 li a em {
-    color: #cc0000;
+  color: #cc0000;
 }
 
 a:hover {
-    color: #cc6600;
+  color: #cc6600;
 }
 
 h1 {
-    margin: 0 0 0.5em 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 200%;
+  margin: 0 0 0.5em 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 200%;
 }
 
 h1 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1 a:visited,
 h1 a:hover,
 h1 a:active {
-    color: #333333;
+  color: #333333;
 }
 
 em {
-    color: #cc0000;
-    font-style: normal;
+  color: #cc0000;
+  font-style: normal;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 ul li {
-    margin: 0.5em;
+  margin: 0.5em;
+}
+
+#header, #body, #footer {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+#body h1 {
+  display: none;
+}
+
+#footer h1 {
+  display: none;
+}
+
+#footer address {
+  font-size: 50%;
+  text-align: right;
+}
+
+#footer address a {
+  color: #333333;
+  text-decoration: none;
+  font-style: normal;
 }
 
