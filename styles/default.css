@@ -1,6 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
-@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
-
 body {
     font-family: 'Share Tech Mono', sans-serif;
     font-size: 48px;
@@ -13,18 +10,13 @@ a {
     color: #0066cc;
 }
 
-a:visited {
-    color: #6600cc;
+li a em {
+    color: #cc0000;
 }
 
 a:hover {
     color: #cc6600;
 }
-
-a:active {
-    color: #cc0000;
-}
-
 
 h1 {
     margin: 0 0 0.5em 0;
@@ -51,11 +43,7 @@ ul {
     list-style-type: none;
 }
 
-li {
+ul li {
     margin: 0.5em;
-}
-
-li:first-letter {
-    color: #cc0000;
 }
 
