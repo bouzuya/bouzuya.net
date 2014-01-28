@@ -2,20 +2,27 @@ body {
   font-family: 'Share Tech Mono', sans-serif;
   font-size: 48px;
   font-weight: bold;
-  color: #333333;
+  color: #4e6a41;
+  background-color: #4e6a41;
+  padding: 8px;
+}
+
+em {
+  font-style: normal;
+}
+
+.wrapper {
   background-color: #efefef;
+  border-radius: 8px;
 }
 
 a {
-  color: #0066cc;
-}
-
-li a em {
-  color: #cc0000;
+  visibility: hidden;
+  color: #4e6a41;
 }
 
 a:hover {
-  color: #cc6600;
+  color: #4e6a41;
 }
 
 h1 {
@@ -25,18 +32,29 @@ h1 {
 }
 
 h1 a {
+  visibility: visible;
   text-decoration: none;
 }
 
 h1 a:visited,
 h1 a:hover,
 h1 a:active {
-  color: #333333;
+  color: #4e6a41;
 }
 
-em {
+a:hover {
+  visibility: visible;
+  color: #4e6a41;
+}
+
+a em {
+  visibility: visible;
+}
+
+.accesskey {
   color: #cc0000;
   font-style: normal;
+  text-decoration: none;
 }
 
 ul {
@@ -63,10 +81,11 @@ ul li {
 #footer address {
   font-size: 50%;
   text-align: right;
+  padding: 1em;
 }
 
 #footer address a {
-  color: #333333;
+  visibility: visible;
   text-decoration: none;
   font-style: normal;
 }
