@@ -3,8 +3,3 @@ bouzuya.net
 
 bouzuya.net is bouzuya's web site.
 
-Version
-------------------------------------------------------------------------------
-
-current version is 0.2.1.
-
