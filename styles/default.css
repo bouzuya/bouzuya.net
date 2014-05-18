@@ -87,6 +87,16 @@ a em {
   text-decoration: none;
 }
 
+a em i {
+  width: 1.5em;
+  text-shadow: none;
+  text-align: center;
+}
+
+.fa-hatena:before {
+  content: "\f128";
+}
+
 .accesskey {
   color: #cc0000;
   font-style: normal;
@@ -99,7 +109,7 @@ ul {
   -webkit-box-sizing: border-box;
   width: 300px;
   margin: 0.5em auto;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 0.5em;
   list-style-type: none;
 }
 
