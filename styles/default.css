@@ -1,5 +1,3 @@
-/* @bouzuya-green: rgb(78, 106, 65); #4e6a41; */
-
 html {
   position: relative;
   width: 100%;
@@ -7,13 +5,11 @@ html {
   margin: 0;
   padding: 0;
 }
-
 body {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   user-select: none;
   -webkit-user-select: none;
-
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -22,87 +18,73 @@ body {
   margin: 0;
   padding: 4px;
   overflow: hidden;
-
   font-family: 'Share Tech Mono', sans-serif;
   font-size: 32px;
   font-weight: bold;
-  color: #4e6a41;
-  background-color: #4e6a41;
+  color: #4f6c42;
+  background-color: #4f6c42;
 }
-
 em {
   font-style: normal;
 }
-
 .wrapper {
   width: 100%;
   height: 100%;
-  background-color: #efefef;
   border-radius: 4px;
   overflow: hidden;
 }
-
 a {
   font-size: 12px;
-
-  color: rgba(78, 106, 65, 0);
+  color: #4f6c42;
   transition: 0.5s ease;
   -webkit-transition: 0.5s ease;
-  text-shadow: 5px 2px rgba(192, 192, 192, 0);
+  text-shadow: 5px 2px #4f6c42;
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
 }
-
 a:hover {
-  color: rgba(78, 106, 65, 1);
-  text-shadow: 5px 2px rgba(192, 192, 192, 0.5);
+  color: #eef3ec;
+  text-shadow: 5px 2px #5d7e4e;
   text-decoration: none;
 }
-
+a em {
+  font-size: 32px;
+  color: #eef3ec;
+  text-shadow: 5px 2px #5d7e4e;
+  text-decoration: none;
+}
+a em i {
+  width: 1.5em;
+  text-shadow: none;
+  text-align: center;
+  text-shadow: 5px 2px #5d7e4e;
+}
 h1 {
   margin: 0 0 0.5em 0;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
-
 h1 a {
   font-size: 64px;
-  color: rgba(78, 106, 65, 1);
-  text-shadow: 5px 2px rgba(192, 192, 192, 0.5);
+  color: #eef3ec;
+  text-shadow: 5px 2px #5d7e4e;
   text-decoration: none;
 }
-
 h1 a:visited,
 h1 a:hover,
 h1 a:active {
-  color: #4e6a41;
+  color: #eef3ec;
   text-decoration: none;
 }
-
-a em {
-  font-size: 32px;
-  color: rgba(78, 106, 65, 1);
-  text-shadow: 5px 2px rgba(192, 192, 192, 0.5);
-  text-decoration: none;
-}
-
-a em i {
-  width: 1.5em;
-  text-shadow: none;
-  text-align: center;
-}
-
 .fa-hatena:before {
   content: "\f128";
 }
-
 .accesskey {
-  color: #cc0000;
+  color: #9bb98d;
   font-style: normal;
   text-decoration: none;
 }
-
 ul {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -112,38 +94,34 @@ ul {
   padding: 0 0 0 0.5em;
   list-style-type: none;
 }
-
 li {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-
 li a {
   width: 100%;
 }
-
-#header, #body, #footer {
+#header,
+#body,
+#footer {
   margin: 0 auto;
   max-width: 940px;
 }
-
 #body h1 {
   display: none;
 }
-
 #footer h1 {
   display: none;
 }
-
 #footer address {
   font-size: 50%;
   font-style: normal;
   text-align: right;
   padding: 0 1em 0 0;
 }
-
 #footer address a {
+  color: #eef3ec;
+  text-shadow: 5px 2px #5d7e4e;
   text-decoration: none;
 }
-
