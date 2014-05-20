@@ -2,7 +2,6 @@
   "name": "bouzuya.net",
   "version": "0.5.0",
   "description": "bouzuya's web site.",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/bouzuya/bouzuya.net"
