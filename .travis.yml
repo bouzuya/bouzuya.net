@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "0.10"
+deploy:
+  provider: s3
+  access_key_id:
+    secure: "dfHyShxR7gJSyUBG7tVVEI4Gaanv/H29VV/R+/1hLXHxSkyUiLLa2rzEGx7pSvQseS4/xId1OmkX0gTaMWkkNNC1vG1T+bPT+FPrsSp3HcYLps+YPcvJh/7QjpZH0WJfgSy0pYoluTQplz5/1zarpKW5GUyV5RbMu+Do5mUuBPY="
+  secret_access_key:
+    secure: "j3D4T7ZfcltlqNGvBUvRXKxqffgNORgKFdM2FN956CCEdS6FZihMS6nyT18I5WLR7efDTEWM9MSWXNiFrp0Tq2HYcswhPI0UG7VfIyzCROpswujvQZzZZtYAKVANFGJC/0Agz6nQiQ4V3dgyN8IA9v5fgqrtAMIvD+MsRcS0qWw="
+  bucket: bouzuya.net
+  region: ap-northeast-1
+  endpoint: s3-ap-northeast-1.amazonaws.com
+  local-dir: public
+  on:
+    branch: master
