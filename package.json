@@ -1,0 +1,23 @@
+{
+  "name": "bouzuya.net",
+  "version": "0.5.0",
+  "description": "bouzuya's web site.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bouzuya/bouzuya.net"
+  },
+  "keywords": [
+    "bouzuya"
+  ],
+  "author": {
+    "name": "bouzuya",
+    "email": "bouzuya@gmail.com",
+    "url": "http://bouzuya.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bouzuya/bouzuya.net/issues"
+  },
+  "homepage": "http://bouzuya.net"
+}
