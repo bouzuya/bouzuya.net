@@ -1,5 +1,5 @@
 bouzuya.net
 ==============================================================================
 
-bouzuya.net is bouzuya's web site.
+[bouzuya.net](http://bouzuya.net/) is bouzuya's web site.
 
