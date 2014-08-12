@@ -32,6 +32,10 @@ body a:hover i {
   padding: 0;
   text-align: center;
 }
+.container-fluid .row {
+  margin: 0;
+  max-width: 100%;
+}
 .container-fluid ul {
   margin: 0;
   padding: 0;
@@ -47,6 +51,10 @@ body > header {
   padding: 0;
   text-align: center;
 }
+body > header .row {
+  margin: 0;
+  max-width: 100%;
+}
 body > header ul {
   margin: 0;
   padding: 0;
@@ -61,6 +69,10 @@ body > header h1 {
 body > section {
   padding: 0;
   text-align: center;
+}
+body > section .row {
+  margin: 0;
+  max-width: 100%;
 }
 body > section ul {
   margin: 0;
@@ -79,6 +91,10 @@ body > footer {
   color: #eef3ec;
   background-color: #4f6c42;
   padding: 160px 0;
+}
+body > footer .row {
+  margin: 0;
+  max-width: 100%;
 }
 body > footer ul {
   margin: 0;
