@@ -4,10 +4,6 @@
 .accesskey {
   font-style: normal;
 }
-.container-fluid .row {
-  margin: 0;
-  max-width: 100%;
-}
 body {
   color: #4f6c42;
   background-color: #eef3ec;
@@ -27,6 +23,9 @@ body a:hover {
 body a:hover i {
   color: #4f6c42;
   background-color: transparent;
+}
+address {
+  display: inline;
 }
 .container-fluid {
   padding: 0;
@@ -116,7 +115,6 @@ body > footer a:hover {
   background-color: #eef3ec;
 }
 body > footer a:hover address {
-  display: inline;
   color: #4f6c42;
   background-color: #eef3ec;
 }
@@ -180,7 +178,6 @@ body > footer a:hover i {
   background-color: #eef3ec;
 }
 .face a:hover address {
-  display: inline;
   color: #4f6c42;
   background-color: #eef3ec;
 }
@@ -230,7 +227,6 @@ body > footer a:hover i {
   background-color: #eef3ec;
 }
 .mail a:hover address {
-  display: inline;
   color: #4f6c42;
   background-color: #eef3ec;
 }
