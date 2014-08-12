@@ -22,87 +22,49 @@
 @footer-text-shadow-color:           @color3;
 @accesskey-color:                    @color2;
 
-html {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+.light-color() {
+  color: @color4;
+  background-color: @color1;
 
-body {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  user-select: none;
-  -webkit-user-select: none;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 4px;
-  overflow: hidden;
-  font-family: 'Share Tech Mono', sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  color: @default-color;
-  background-color: @default-background-color;
-}
+  a {
+    color: @color4;
+    background-color: @color1;
 
-em {
-  font-style: normal;
-}
+    &:hover {
+      color: @color1;
+      background-color: @color4;
+      text-decoration: none;
 
-.wrapper {
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-a {
-  font-size: 12px;
-  color: @default-a-color;
-  transition: 0.5s ease;
-  -webkit-transition: 0.5s ease;
-  text-shadow: 5px 2px @default-a-text-shadow-color;
-  white-space: nowrap;
-  overflow: hidden;
-  text-decoration: none;
-  &:hover {
-    color: @default-a-hover-color;
-    text-shadow: 5px 2px @default-a-hover-text-shadow-color;
-    text-decoration: none;
-  }
-  em {
-    font-size: 32px;
-    color: @default-a-strong-color;
-    text-shadow: 5px 2px @default-a-strong-text-shadow-color;
-    text-decoration: none;
-    i {
-      width: 1.5em;
-      text-shadow: none;
-      text-align: center;
-      text-shadow: 5px 2px @default-a-strong-text-shadow-color;
+      i {
+        color: @color4;
+        background-color: transparent;
+      }
     }
   }
 }
 
-h1 {
-  margin: 0 0 0.5em 0;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+.dark-color() {
+  color: @color1;
+  background-color: @color4;
+
   a {
-    font-size: 64px;
-    color: @header-color;
-    text-shadow: 5px 2px @header-text-shadow-color;
-    text-decoration: none;
-    &:visited,
-    &:hover,
-    &:active {
-      color: @header-color;
-      text-decoration: none;
+    color: @color1;
+    background-color: @color4;
+
+    &:hover {
+      color: @color4;
+      background-color: @color1;
+
+      address {
+        display: inline;
+        color: @color4;
+        background-color: @color1;
+      }
+
+      i {
+        color: @color1;
+        background-color: transparent;
+      }
     }
   }
 }
@@ -112,53 +74,111 @@ h1 {
 }
 
 .accesskey {
-  color: @accesskey-color;
   font-style: normal;
-  text-decoration: none;
 }
 
-ul {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  width: 300px;
-  margin: 0.5em auto;
-  padding: 0 0 0 0.5em;
-  list-style-type: none;
-}
-
-li {
-  width: 100%;
+.container-fluid .row {
   margin: 0;
+  max-width: 100%;
+}
+
+body {
+  .light-color();
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.container-fluid {
   padding: 0;
-  a {
-    width: 100%;
-  }
-}
+  text-align: center;
 
-#header, #body, #footer {
-  margin: 0 auto;
-  max-width: 940px;
-}
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 
-#body h1 {
-  display: none;
-}
-
-#footer {
-  h1 {
-    display: none;
-  }
-  address {
-    font-size: 50%;
-    font-style: normal;
-    text-align: right;
-    padding: 0 1em 0 0;
-    a {
-      color: @footer-color;
-      text-shadow: 5px 2px @footer-text-shadow-color;
-      text-decoration: none;
+    li h1 {
+      margin: 0;
     }
   }
+
+  h1 {
+    font-weight: bold;
+  }
 }
 
+body {
+
+  > header {
+    .container-fluid;
+  }
+
+  > section {
+    .container-fluid;
+  }
+
+  > footer {
+    .container-fluid;
+    .dark-color();
+    padding: 160px 0;
+  }
+}
+
+.title {
+  .light-color();
+  font-size: 64px;
+  padding: 160px 0;
+
+  a:hover {
+    .light-color();
+    text-decoration: underline;
+  }
+}
+
+.face {
+  .dark-color();
+  padding: 160px 0;
+  font-family: 'Fredoka One';
+  font-size: 64px;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+
+  a {
+    padding: 32px;
+    border-radius: 512px;
+  }
+}
+
+.blog {
+  .light-color();
+  padding: 160px 0;
+  font-size: 32px;
+
+  .icon {
+    font-size: 48px;
+    display: block;
+  }
+}
+
+.mail {
+  .dark-color();
+  padding: 160px 0;
+  font-size: 32px;
+
+  .icon {
+    font-size: 48px;
+    display: block;
+  }
+}
+
+.socials {
+  .light-color();
+  padding: 160px 0;
+
+  .icon {
+    font-size: 96px;
+    display: block;
+  }
+}
