@@ -10,6 +10,15 @@
   "bugs": {
     "url": "https://github.com/bouzuya/bouzuya.net/issues"
   },
+  "devDependencies": {
+    "browser-sync": "^2.7.10",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-util": "^3.0.5",
+    "gulp-watch": "^4.2.4",
+    "run-sequence": "^1.1.0"
+  },
   "homepage": "http://bouzuya.net",
   "keywords": [
     "bouzuya"
@@ -18,5 +27,10 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/bouzuya/bouzuya.net"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "watch": "gulp watch"
   }
 }
