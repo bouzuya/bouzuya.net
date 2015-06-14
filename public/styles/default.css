@@ -1,262 +1,509 @@
-.fa-hatena:before {
-  content: "\f128";
-}
-.accesskey {
-  font-style: normal;
+:root {
+  font-size: 16px;
 }
 body {
-  color: #4f6c42;
-  background-color: #eef3ec;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2rem;
 }
-body a {
-  color: #4f6c42;
-  background-color: #eef3ec;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
-body a:hover {
-  color: #eef3ec;
-  background-color: #4f6c42;
-  text-decoration: none;
+p {
+  margin: 0;
 }
-body a:hover i {
-  color: #4f6c42;
-  background-color: transparent;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 address {
   display: inline;
+  font-style: normal;
 }
-.container-fluid {
-  padding: 0;
+a {
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+.root-header {
   text-align: center;
-}
-.container-fluid .row {
-  margin: 0;
-  max-width: 100%;
-}
-.container-fluid ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.container-fluid ul li h1 {
-  margin: 0;
-}
-.container-fluid h1 {
-  font-weight: bold;
-}
-body > header {
-  padding: 0;
-  text-align: center;
-}
-body > header .row {
-  margin: 0;
-  max-width: 100%;
-}
-body > header ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-body > header ul li h1 {
-  margin: 0;
-}
-body > header h1 {
-  font-weight: bold;
-}
-body > section {
-  padding: 0;
-  text-align: center;
-}
-body > section .row {
-  margin: 0;
-  max-width: 100%;
-}
-body > section ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-body > section ul li h1 {
-  margin: 0;
-}
-body > section h1 {
-  font-weight: bold;
-}
-body > footer {
-  padding: 0;
-  text-align: center;
-  color: #eef3ec;
-  background-color: #4f6c42;
-  padding: 160px 0;
-}
-body > footer .row {
-  margin: 0;
-  max-width: 100%;
-}
-body > footer ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-body > footer ul li h1 {
-  margin: 0;
-}
-body > footer h1 {
-  font-weight: bold;
-}
-body > footer a {
-  color: #eef3ec;
-  background-color: #4f6c42;
-}
-body > footer a:hover {
-  color: #4f6c42;
-  background-color: #eef3ec;
-}
-body > footer a:hover address {
-  color: #4f6c42;
-  background-color: #eef3ec;
-}
-body > footer a:hover i {
-  color: #eef3ec;
-  background-color: transparent;
 }
 .title {
   color: #4f6c42;
   background-color: #eef3ec;
   font-size: 64px;
-  padding: 160px 0;
+  height: 90vh;
+  line-height: 90vh;
+  margin: 0;
 }
 .title a {
   color: #4f6c42;
   background-color: #eef3ec;
 }
-.title a:hover {
+.about {
   color: #eef3ec;
   background-color: #4f6c42;
-  text-decoration: none;
-}
-.title a:hover i {
-  color: #4f6c42;
-  background-color: transparent;
-}
-.title a:hover {
-  color: #4f6c42;
-  background-color: #eef3ec;
-  text-decoration: underline;
-}
-.title a:hover a {
-  color: #4f6c42;
-  background-color: #eef3ec;
-}
-.title a:hover a:hover {
-  color: #eef3ec;
-  background-color: #4f6c42;
-  text-decoration: none;
-}
-.title a:hover a:hover i {
-  color: #4f6c42;
-  background-color: transparent;
-}
-.face {
-  color: #eef3ec;
-  background-color: #4f6c42;
-  padding: 160px 0;
-  font-family: 'Fredoka One';
-  font-size: 64px;
-  font-weight: normal;
-  margin: 0;
+  height: 90vh;
+  position: relative;
   text-align: center;
 }
-.face a {
+.about-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 64vh;
+  height: 32vh;
   color: #eef3ec;
   background-color: #4f6c42;
 }
-.face a:hover {
+.about-button .icon {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 37.5%;
+  height: 75%;
+  line-height: 24vh;
+  font-size: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.about-button .icon:focus,
+.about-button .icon:hover {
+  text-decoration: none;
+}
+.about-button .icon:before {
+  display: inline;
+  vertical-align: top;
+  line-height: 24vh;
+}
+.about-button .label {
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 25%;
+  line-height: 8vh;
+}
+.about-button:focus .label,
+.about-button:hover .label {
+  text-decoration: underline;
+}
+.about-button:focus .icon,
+.about-button:hover .icon {
   color: #4f6c42;
   background-color: #eef3ec;
 }
-.face a:hover address {
-  color: #4f6c42;
-  background-color: #eef3ec;
-}
-.face a:hover i {
+.about-button .icon {
   color: #eef3ec;
-  background-color: transparent;
+  background-color: #4f6c42;
 }
-.face a {
-  padding: 32px;
-  border-radius: 512px;
+.about-button .label {
+  color: #eef3ec;
+  background-color: #4f6c42;
+}
+.about-button:focus,
+.about-button:hover {
+  text-decoration: none;
+}
+.about-button .icon {
+  font-family: 'Fredoka One';
+  font-weight: normal;
+  font-style: normal;
+  vertical-align: middle;
 }
 .blog {
   color: #4f6c42;
   background-color: #eef3ec;
-  padding: 160px 0;
-  font-size: 32px;
+  height: 96vh;
+  position: relative;
+  text-align: center;
 }
-.blog a {
+.blog-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 64vh;
+  height: 32vh;
   color: #4f6c42;
   background-color: #eef3ec;
 }
-.blog a:hover {
-  color: #eef3ec;
-  background-color: #4f6c42;
+.blog-button .icon {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 37.5%;
+  height: 75%;
+  line-height: 24vh;
+  font-size: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.blog-button .icon:focus,
+.blog-button .icon:hover {
   text-decoration: none;
 }
-.blog a:hover i {
-  color: #4f6c42;
-  background-color: transparent;
+.blog-button .icon:before {
+  display: inline;
+  vertical-align: top;
+  line-height: 24vh;
 }
-.blog .icon {
-  font-size: 48px;
+.blog-button .label {
+  font-family: 'Open Sans', sans-serif;
   display: block;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 25%;
+  line-height: 8vh;
+}
+.blog-button:focus .label,
+.blog-button:hover .label {
+  text-decoration: underline;
+}
+.blog-button:focus .icon,
+.blog-button:hover .icon {
+  color: #eef3ec;
+  background-color: #4f6c42;
+}
+.blog-button .icon {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.blog-button .label {
+  color: #4f6c42;
+  background-color: #eef3ec;
 }
 .mail {
   color: #eef3ec;
   background-color: #4f6c42;
-  padding: 160px 0;
-  font-size: 32px;
+  height: 96vh;
+  position: relative;
+  text-align: center;
 }
-.mail a {
+.mail-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 64vh;
+  height: 32vh;
   color: #eef3ec;
   background-color: #4f6c42;
 }
-.mail a:hover {
-  color: #4f6c42;
-  background-color: #eef3ec;
-}
-.mail a:hover address {
-  color: #4f6c42;
-  background-color: #eef3ec;
-}
-.mail a:hover i {
-  color: #eef3ec;
-  background-color: transparent;
-}
-.mail .icon {
-  font-size: 48px;
+.mail-button .icon {
   display: block;
+  position: relative;
+  margin: auto;
+  width: 37.5%;
+  height: 75%;
+  line-height: 24vh;
+  font-size: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mail-button .icon:focus,
+.mail-button .icon:hover {
+  text-decoration: none;
+}
+.mail-button .icon:before {
+  display: inline;
+  vertical-align: top;
+  line-height: 24vh;
+}
+.mail-button .label {
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 25%;
+  line-height: 8vh;
+}
+.mail-button:focus .label,
+.mail-button:hover .label {
+  text-decoration: underline;
+}
+.mail-button:focus .icon,
+.mail-button:hover .icon {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.mail-button .icon {
+  color: #eef3ec;
+  background-color: #4f6c42;
+}
+.mail-button .label {
+  color: #eef3ec;
+  background-color: #4f6c42;
 }
 .socials {
   color: #4f6c42;
   background-color: #eef3ec;
-  padding: 160px 0;
+  height: 96vh;
+  text-align: center;
 }
-.socials a {
+@media screen and (max-width: 960px) {
+  .socials {
+    height: 288vh;
+  }
+}
+.socials:after {
+  content: " ";
+  clear: both;
+}
+.social {
+  float: left;
+  width: 33.3%;
+  display: block;
+  height: 96vh;
+  position: relative;
+}
+@media screen and (max-width: 960px) {
+  .social {
+    width: 100%;
+  }
+}
+.twitter-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 64vh;
+  height: 32vh;
   color: #4f6c42;
   background-color: #eef3ec;
 }
-.socials a:hover {
-  color: #eef3ec;
-  background-color: #4f6c42;
+.twitter-button .icon {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 37.5%;
+  height: 75%;
+  line-height: 24vh;
+  font-size: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.twitter-button .icon:focus,
+.twitter-button .icon:hover {
   text-decoration: none;
 }
-.socials a:hover i {
-  color: #4f6c42;
-  background-color: transparent;
+.twitter-button .icon:before {
+  display: inline;
+  vertical-align: top;
+  line-height: 24vh;
 }
-.socials .icon {
-  font-size: 96px;
+.twitter-button .label {
+  font-family: 'Open Sans', sans-serif;
   display: block;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 25%;
+  line-height: 8vh;
+}
+.twitter-button:focus .label,
+.twitter-button:hover .label {
+  text-decoration: underline;
+}
+.twitter-button:focus .icon,
+.twitter-button:hover .icon {
+  color: #eef3ec;
+  background-color: #4f6c42;
+}
+.twitter-button .icon {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.twitter-button .label {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.github-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 64vh;
+  height: 32vh;
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.github-button .icon {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 37.5%;
+  height: 75%;
+  line-height: 24vh;
+  font-size: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.github-button .icon:focus,
+.github-button .icon:hover {
+  text-decoration: none;
+}
+.github-button .icon:before {
+  display: inline;
+  vertical-align: top;
+  line-height: 24vh;
+}
+.github-button .label {
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 25%;
+  line-height: 8vh;
+}
+.github-button:focus .label,
+.github-button:hover .label {
+  text-decoration: underline;
+}
+.github-button:focus .icon,
+.github-button:hover .icon {
+  color: #eef3ec;
+  background-color: #4f6c42;
+}
+.github-button .icon {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.github-button .label {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.hatena-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 64vh;
+  height: 32vh;
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.hatena-button .icon {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 37.5%;
+  height: 75%;
+  line-height: 24vh;
+  font-size: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.hatena-button .icon:focus,
+.hatena-button .icon:hover {
+  text-decoration: none;
+}
+.hatena-button .icon:before {
+  display: inline;
+  vertical-align: top;
+  line-height: 24vh;
+}
+.hatena-button .label {
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 25%;
+  line-height: 8vh;
+}
+.hatena-button:focus .label,
+.hatena-button:hover .label {
+  text-decoration: underline;
+}
+.hatena-button:focus .icon,
+.hatena-button:hover .icon {
+  color: #eef3ec;
+  background-color: #4f6c42;
+}
+.hatena-button .icon {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.hatena-button .label {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
+.fa-hatena:before {
+  content: "\f128";
+}
+.root-footer {
+  color: #eef3ec;
+  background-color: #4f6c42;
+  text-align: center;
+  height: 90vh;
+  line-height: 90vh;
+}
+.copyright-name {
+  color: #eef3ec;
+  background-color: #4f6c42;
+  display: inline-block;
+}
+.copyright-name:focus,
+.copyright-name:hover {
+  color: #eef3ec;
+  background-color: #4f6c42;
 }
