@@ -1,22 +1,22 @@
 {
   "name": "bouzuya.net",
-  "version": "0.6.2",
   "description": "bouzuya's web site.",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/bouzuya/bouzuya.net"
-  },
-  "keywords": [
-    "bouzuya"
-  ],
+  "version": "0.6.2",
   "author": {
     "name": "bouzuya",
     "email": "bouzuya@gmail.com",
     "url": "http://bouzuya.net"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bouzuya/bouzuya.net/issues"
   },
-  "homepage": "http://bouzuya.net"
+  "homepage": "http://bouzuya.net",
+  "keywords": [
+    "bouzuya"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bouzuya/bouzuya.net"
+  }
 }
