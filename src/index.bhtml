@@ -1,0 +1,164 @@
+><!DOCTYPE html>
+<html
+  <head
+    </meta
+      @http-equiv content-type
+      @content text/html; charset=UTF-8
+    </meta
+      @name viewport
+      @content width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0
+    </meta
+      @property og:title
+      @content bouzuya.net
+    </meta
+      @property og:type
+      @content website
+    </meta
+      @property og:image
+      @content http://bouzuya.net/images/bouzuya-200x200.png
+    </meta
+      @property og:description
+      @content bouzuya's web site.
+    </meta
+      @property og:url
+      @content http://bouzuya.net/
+    </link
+      @rel icon
+      @type image/png
+      @href /images/favicon.png
+    </link
+      @rel stylesheet
+      @type text/css
+      @href http://fonts.googleapis.com/css?family=Open+Sans:800
+    </link
+      @rel stylesheet
+      @type text/css
+      @href http://fonts.googleapis.com/css?family=Fredoka+One
+    </link
+      @rel stylesheet
+      @type text/css
+      @href //maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css
+    </link
+      @rel stylesheet
+      @type text/css
+      @href /styles/default.css
+    </link
+      @rel author
+      @href https://plus.google.com/101658191762408128993
+    <title
+      >bouzuya.net
+  <body
+    <header
+      @class root-header
+      <h1
+        @class title
+        <a
+          @accesskey u
+          @href /
+          @title bouzuya.net
+          >bouzuya.net
+    <section
+      <ul
+        <li
+          @class about
+          <a
+            @accesskey (
+            @class about-button
+            @href https://twitter.com/bouzuya/
+            @title bouzuya
+            <i
+              @class icon
+              >([:-P
+            <span
+              @class label
+              >bouzuya
+        <li
+          @class blog
+          <a
+            @accesskey b
+            @class blog-button
+            @href http://blog.bouzuya.net
+            @title blog.bouzuya.net
+            <i
+              @class icon fa fa-pencil
+            <span
+              @class label
+              >blog.bouzuya.net
+        <li
+          @class mail
+          <a
+            @accesskey m
+            @class mail-button
+            @href mailto:mail@bouzuya.net
+            @title mail@bouzuya.net
+            <i
+              @class icon fa fa-envelope-o
+            <span
+              @class label
+              <address
+                >mail@bouzuya.net
+    <section
+      @class socials
+      <ul
+        <li
+          @class social
+          <a
+            @accesskey t
+            @class twitter-button
+            @href https://twitter.com/bouzuya/
+            @title twitter.com/bouzuya
+            <i
+              @class icon fa fa-twitter
+            <span
+              @class label
+              >Twitter
+        <li
+          @class social
+          <a
+            @accesskey g
+            @class github-button
+            @href https://github.com/bouzuya/
+            @title github.com/bouzuya
+            <i
+              @class icon fa fa-github-square
+            <span
+              @class label
+              >GitHub
+        <li
+          @class social
+          <a
+            @accesskey h
+            @class hatena-button
+            @href http://hatena.ne.jp/bouzuya/
+            @title hatena.ne.jp/bouzuya
+            <i
+              @class icon fa fa-hatena
+            <span
+              @class label
+              >Hatena
+    <footer
+      @class root-footer
+      <p
+        @class copyright
+        >&copy;&nbsp;
+        <a
+          @accesskey @
+          @class copyright-name
+          @href https://twitter.com/bouzuya/
+          >bouzuya
+        >&nbsp;2015
+    <script
+      ><![CDATA[
+      |var _gaq = _gaq || [];
+      |_gaq.push(['_setAccount', 'UA-29242739-1']);
+      |_gaq.push(['_trackPageview']);
+      |(function() {
+      |  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      |  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      |  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      |})();
+      |]]>
+    <script
+      @src //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+    <script
+      @src //maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js
