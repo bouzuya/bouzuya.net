@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.7.10",
+    "coffee-script": "^1.9.3",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-b-html": "^0.2.0",
@@ -30,7 +31,7 @@
     "url": "git://github.com/bouzuya/bouzuya.net"
   },
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp",
     "clean": "gulp clean",
     "watch": "gulp watch"
   }

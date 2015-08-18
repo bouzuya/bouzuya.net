@@ -12,13 +12,21 @@ ignoreError = (stream) ->
     gutil.log e
     @emit 'end'
 
-gulp.task 'build', ['less'], ->
+gulp.task 'build', ['build:bhtml', 'build:less']
+
+gulp.task 'build:bhtml', ->
   gulp.src './src/*.bhtml'
   .pipe bHtml()
   .pipe gulp.dest './public/'
 
+gulp.task 'build:less', ->
+  gulp.src './src/styles/*.less'
+  .pipe less()
+  .pipe gulp.dest './public/styles/'
+
 gulp.task 'clean', (done) ->
   del [
+    './public/*.html'
     './public/styles/*.css'
   ], done
   null
@@ -31,18 +39,13 @@ gulp.task 'default', (done) ->
   ]
   null
 
-gulp.task 'build:less', ->
-  gulp.src './public/styles/*.less'
-  .pipe less()
-  .pipe gulp.dest './public/styles/'
-
 gulp.task 'watch', ['build'], ->
   browserSync
     server:
       baseDir: './public'
   watch [
-    './public/styles/*.less'
-    './public/*.bhtml'
+    './src/styles/*.less'
+    './src/*.bhtml'
   ], ->
     run.apply run, [
       'build'
