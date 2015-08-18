@@ -1,3 +1,4 @@
+bHtml = require 'gulp-b-html'
 browserSync = require 'browser-sync'
 del = require 'del'
 gulp = require 'gulp'
@@ -11,10 +12,10 @@ ignoreError = (stream) ->
     gutil.log e
     @emit 'end'
 
-gulp.task 'build', ->
-  gulp.src './public/styles/*.less'
-  .pipe less()
-  .pipe gulp.dest './public/styles/'
+gulp.task 'build', ['less'], ->
+  gulp.src './src/*.bhtml'
+  .pipe bHtml()
+  .pipe gulp.dest './public/'
 
 gulp.task 'clean', (done) ->
   del [
@@ -30,12 +31,18 @@ gulp.task 'default', (done) ->
   ]
   null
 
+gulp.task 'build:less', ->
+  gulp.src './public/styles/*.less'
+  .pipe less()
+  .pipe gulp.dest './public/styles/'
+
 gulp.task 'watch', ['build'], ->
   browserSync
     server:
       baseDir: './public'
   watch [
     './public/styles/*.less'
+    './public/*.bhtml'
   ], ->
     run.apply run, [
       'build'
