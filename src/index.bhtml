@@ -15,7 +15,7 @@
       @content website
     </meta
       @property og:image
-      @content http://bouzuya.net/images/bouzuya-200x200.png
+      @content http://bouzuya.net/images/bouzuya-icon-v3.png
     </meta
       @property og:description
       @content bouzuya's web site.
@@ -66,9 +66,9 @@
             @class about-button
             @href https://twitter.com/bouzuya/
             @title bouzuya
-            <i
+            <img
               @class icon
-              >([:-P
+              @src /images/bouzuya-icon-v3.png
             <span
               @class label
               >bouzuya
