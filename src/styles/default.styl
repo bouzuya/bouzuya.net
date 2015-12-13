@@ -1,0 +1,252 @@
+// #4e6a41
+// rgb(78, 106, 65)
+// hsl(101, 24%, 34%)
+$bouzuya-green =  hsl(101, 24%, 34%)
+
+$color1 =  hsl(101, 24%, 94%)
+$color2 =  hsl(101, 24%, 64%)
+$color3 =  hsl(101, 24%, 40%)
+$color4 =  $bouzuya-green
+
+$font1 =  'Open Sans'
+$font2 =  'Fredoka One'
+
+$default-color =                       $color4
+$default-background-color =            $color4
+$default-a-color =                     $color4
+$default-a-text-shadow-color =         $color4
+$default-a-hover-color =               $color1
+$default-a-hover-text-shadow-color =   $color3
+$default-a-strong-color =              $color1
+$default-a-strong-text-shadow-color =  $color3
+$header-color =                        $color1
+$header-text-shadow-color =            $color3
+$footer-color =                        $color1
+$footer-text-shadow-color =            $color3
+$accesskey-color =                     $color2
+
+// mixins
+
+dark-color()
+  color $color1
+  background-color $color4
+
+light-color()
+  color $color4
+  background-color $color1
+
+button()
+  $button-height =  (96 / 3 vh)
+  $button-width =  $button-height * 2
+
+  display block
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  margin auto
+  max-width 100%
+  width $button-width
+  height $button-height
+
+  .icon
+    display block
+    position relative
+    margin auto
+    width 37.5% // =height
+    height 75%  // =width
+    line-height ($button-height * 3 / 4)
+    font-size 4rem
+    border-radius 50%
+    overflow hidden
+
+    &:focus, &:hover
+      text-decoration: none
+
+    &:before  // font-awesome icons
+      display inline
+      vertical-align top
+      line-height ($button-height * 3 / 4)
+
+  .label
+    font-family $font1, sans-serif
+    display block
+    position absolute
+    top 75%
+    right 0
+    bottom 0
+    left 0
+    margin auto
+    width 100%
+    height 25%
+    line-height ($button-height * 1 / 4)
+
+  &:focus, &:hover
+    .label
+      text-decoration: underline
+
+dark-button()
+  button()
+  dark-color()
+
+  .icon
+    dark-color()
+
+  .label
+    dark-color()
+
+  &:focus, &:hover
+    .icon
+      light-color()
+
+light-button()
+  button()
+  light-color()
+
+  &:focus, &:hover
+    .icon
+      dark-color()
+
+  .icon
+    light-color()
+
+  .label
+    light-color()
+
+// reset & base
+
+:root
+  font-size 16px
+
+body
+  font-family $font1, sans-serif
+  font-weight bold
+  font-size 2rem
+
+html, body
+  margin 0
+  padding 0
+
+p
+  margin 0
+
+ul
+  margin 0
+  padding 0
+  list-style-type: none
+
+address
+  display inline
+  font-style: normal
+
+a
+  text-decoration: none
+
+  &:focus, &:hover
+    text-decoration: underline
+
+// other
+
+.root-header
+  text-align center
+
+.title
+  light-color()
+
+  font-size 48px
+  height 90vh
+  line-height 90vh
+  margin 0
+
+  a
+    light-color()
+
+.about
+  dark-color()
+
+  height 90vh
+  position relative
+  text-align center
+
+.about-button
+  dark-button()
+
+  &:focus, &:hover
+    text-decoration: none
+
+  .icon
+    border-radius 0
+    font-family $font2
+    font-weight normal
+    font-style: normal
+    vertical-align middle
+
+.blog
+  light-color()
+
+  height 96vh
+  position relative
+  text-align center
+
+.blog-button
+  light-button()
+
+.mail
+  dark-color()
+
+  height 96vh
+  position relative
+  text-align center
+
+.mail-button
+  dark-button()
+
+.socials
+  light-color()
+
+  height 96vh
+  text-align center
+
+  @media screen and (max-width: 960px)
+    height 96 * 3vh
+
+  &:after
+    content " "
+    clear: both
+
+.social
+  float: left
+  width 33.3%
+  display block
+  height 96vh
+  position relative
+
+  @media screen and (max-width: 960px)
+    width 100%
+
+.twitter-button
+  light-button()
+
+.github-button
+  light-button()
+
+.hatena-button
+  light-button()
+
+.fa-hatena:before
+  content "\f128"
+
+.root-footer
+  dark-color()
+  text-align center
+  height 90vh
+  line-height 90vh
+
+.copyright-name
+  dark-color()
+
+  display inline-block
+
+  &:focus, &:hover
+    dark-color()

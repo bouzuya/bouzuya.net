@@ -3,7 +3,7 @@ browserSync = require 'browser-sync'
 del = require 'del'
 gulp = require 'gulp'
 gutil = require 'gulp-util'
-less = require 'gulp-less'
+stylus = require 'gulp-stylus'
 run = require 'run-sequence'
 watch = require 'gulp-watch'
 
@@ -12,16 +12,16 @@ ignoreError = (stream) ->
     gutil.log e
     @emit 'end'
 
-gulp.task 'build', ['build:bhtml', 'build:less']
+gulp.task 'build', ['build:bhtml', 'build:stylus']
 
 gulp.task 'build:bhtml', ->
   gulp.src './src/*.bhtml'
   .pipe bHtml()
   .pipe gulp.dest './public/'
 
-gulp.task 'build:less', ->
-  gulp.src './src/styles/*.less'
-  .pipe less()
+gulp.task 'build:stylus', ->
+  gulp.src './src/styles/*.styl'
+  .pipe stylus()
   .pipe gulp.dest './public/styles/'
 
 gulp.task 'clean', (done) ->
@@ -44,7 +44,7 @@ gulp.task 'watch', ['build'], ->
     server:
       baseDir: './public'
   watch [
-    './src/styles/*.less'
+    './src/styles/*.styl'
     './src/*.bhtml'
   ], ->
     run.apply run, [
