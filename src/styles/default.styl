@@ -61,7 +61,7 @@ button()
     border-radius 50%
     overflow hidden
 
-    &:focus, &:hover
+    &:focus, &:hover, &:active
       text-decoration: none
 
     &:before  // font-awesome icons
@@ -82,7 +82,7 @@ button()
     height 25%
     line-height ($button-height * 1 / 4)
 
-  &:focus, &:hover
+  &:focus, &:hover, &:active
     .label
       text-decoration: underline
 
@@ -96,7 +96,7 @@ dark-button()
   .label
     dark-color()
 
-  &:focus, &:hover
+  &:focus, &:hover, &:active
     .icon
       light-color()
 
@@ -104,7 +104,7 @@ light-button()
   button()
   light-color()
 
-  &:focus, &:hover
+  &:focus, &:hover, &:active
     .icon
       dark-color()
 
@@ -143,7 +143,7 @@ address
 a
   text-decoration: none
 
-  &:focus, &:hover
+  &:focus, &:hover, &:active
     text-decoration: underline
 
 // other
@@ -172,7 +172,7 @@ a
 .about-button
   dark-button()
 
-  &:focus, &:hover
+  &:focus, &:hover, &:active
     text-decoration: none
 
   .icon
@@ -248,5 +248,5 @@ a
 
   display inline-block
 
-  &:focus, &:hover
+  &:focus, &:hover, &:active
     dark-color()
