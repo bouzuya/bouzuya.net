@@ -27,7 +27,8 @@ a {
   text-decoration: none;
 }
 a:focus,
-a:hover {
+a:hover,
+a:active {
   text-decoration: underline;
 }
 .root-header {
@@ -78,7 +79,8 @@ a:hover {
   overflow: hidden;
 }
 .about-button .icon:focus,
-.about-button .icon:hover {
+.about-button .icon:hover,
+.about-button .icon:active {
   text-decoration: none;
 }
 .about-button .icon:before {
@@ -100,13 +102,9 @@ a:hover {
   line-height: 8vh;
 }
 .about-button:focus .label,
-.about-button:hover .label {
+.about-button:hover .label,
+.about-button:active .label {
   text-decoration: underline;
-}
-.about-button:focus .icon,
-.about-button:hover .icon {
-  color: #4f6c42;
-  background-color: #eef3ec;
 }
 .about-button .icon {
   color: #eef3ec;
@@ -116,11 +114,19 @@ a:hover {
   color: #eef3ec;
   background-color: #4f6c42;
 }
+.about-button:focus .icon,
+.about-button:hover .icon,
+.about-button:active .icon {
+  color: #4f6c42;
+  background-color: #eef3ec;
+}
 .about-button:focus,
-.about-button:hover {
+.about-button:hover,
+.about-button:active {
   text-decoration: none;
 }
 .about-button .icon {
+  border-radius: 0;
   font-family: 'Fredoka One';
   font-weight: normal;
   font-style: normal;
@@ -159,7 +165,8 @@ a:hover {
   overflow: hidden;
 }
 .blog-button .icon:focus,
-.blog-button .icon:hover {
+.blog-button .icon:hover,
+.blog-button .icon:active {
   text-decoration: none;
 }
 .blog-button .icon:before {
@@ -181,11 +188,13 @@ a:hover {
   line-height: 8vh;
 }
 .blog-button:focus .label,
-.blog-button:hover .label {
+.blog-button:hover .label,
+.blog-button:active .label {
   text-decoration: underline;
 }
 .blog-button:focus .icon,
-.blog-button:hover .icon {
+.blog-button:hover .icon,
+.blog-button:active .icon {
   color: #eef3ec;
   background-color: #4f6c42;
 }
@@ -230,7 +239,8 @@ a:hover {
   overflow: hidden;
 }
 .mail-button .icon:focus,
-.mail-button .icon:hover {
+.mail-button .icon:hover,
+.mail-button .icon:active {
   text-decoration: none;
 }
 .mail-button .icon:before {
@@ -252,13 +262,9 @@ a:hover {
   line-height: 8vh;
 }
 .mail-button:focus .label,
-.mail-button:hover .label {
+.mail-button:hover .label,
+.mail-button:active .label {
   text-decoration: underline;
-}
-.mail-button:focus .icon,
-.mail-button:hover .icon {
-  color: #4f6c42;
-  background-color: #eef3ec;
 }
 .mail-button .icon {
   color: #eef3ec;
@@ -267,6 +273,12 @@ a:hover {
 .mail-button .label {
   color: #eef3ec;
   background-color: #4f6c42;
+}
+.mail-button:focus .icon,
+.mail-button:hover .icon,
+.mail-button:active .icon {
+  color: #4f6c42;
+  background-color: #eef3ec;
 }
 .socials {
   color: #4f6c42;
@@ -321,7 +333,8 @@ a:hover {
   overflow: hidden;
 }
 .twitter-button .icon:focus,
-.twitter-button .icon:hover {
+.twitter-button .icon:hover,
+.twitter-button .icon:active {
   text-decoration: none;
 }
 .twitter-button .icon:before {
@@ -343,11 +356,13 @@ a:hover {
   line-height: 8vh;
 }
 .twitter-button:focus .label,
-.twitter-button:hover .label {
+.twitter-button:hover .label,
+.twitter-button:active .label {
   text-decoration: underline;
 }
 .twitter-button:focus .icon,
-.twitter-button:hover .icon {
+.twitter-button:hover .icon,
+.twitter-button:active .icon {
   color: #eef3ec;
   background-color: #4f6c42;
 }
@@ -385,7 +400,8 @@ a:hover {
   overflow: hidden;
 }
 .github-button .icon:focus,
-.github-button .icon:hover {
+.github-button .icon:hover,
+.github-button .icon:active {
   text-decoration: none;
 }
 .github-button .icon:before {
@@ -407,11 +423,13 @@ a:hover {
   line-height: 8vh;
 }
 .github-button:focus .label,
-.github-button:hover .label {
+.github-button:hover .label,
+.github-button:active .label {
   text-decoration: underline;
 }
 .github-button:focus .icon,
-.github-button:hover .icon {
+.github-button:hover .icon,
+.github-button:active .icon {
   color: #eef3ec;
   background-color: #4f6c42;
 }
@@ -449,7 +467,8 @@ a:hover {
   overflow: hidden;
 }
 .hatena-button .icon:focus,
-.hatena-button .icon:hover {
+.hatena-button .icon:hover,
+.hatena-button .icon:active {
   text-decoration: none;
 }
 .hatena-button .icon:before {
@@ -471,11 +490,13 @@ a:hover {
   line-height: 8vh;
 }
 .hatena-button:focus .label,
-.hatena-button:hover .label {
+.hatena-button:hover .label,
+.hatena-button:active .label {
   text-decoration: underline;
 }
 .hatena-button:focus .icon,
-.hatena-button:hover .icon {
+.hatena-button:hover .icon,
+.hatena-button:active .icon {
   color: #eef3ec;
   background-color: #4f6c42;
 }
@@ -503,7 +524,8 @@ a:hover {
   display: inline-block;
 }
 .copyright-name:focus,
-.copyright-name:hover {
+.copyright-name:hover,
+.copyright-name:active {
   color: #eef3ec;
   background-color: #4f6c42;
 }
