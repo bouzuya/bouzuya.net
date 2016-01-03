@@ -35,20 +35,20 @@ a:active {
   text-align: center;
 }
 .title {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
   font-size: 48px;
   height: 90vh;
   line-height: 90vh;
   margin: 0;
 }
 .title a {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .about {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
   height: 90vh;
   position: relative;
   text-align: center;
@@ -64,8 +64,8 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .about-button .icon {
   display: block;
@@ -107,18 +107,18 @@ a:active {
   text-decoration: underline;
 }
 .about-button .icon {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .about-button .label {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .about-button:focus .icon,
 .about-button:hover .icon,
 .about-button:active .icon {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .about-button:focus,
 .about-button:hover,
@@ -133,8 +133,8 @@ a:active {
   vertical-align: middle;
 }
 .blog {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
   height: 96vh;
   position: relative;
   text-align: center;
@@ -150,8 +150,8 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .blog-button .icon {
   display: block;
@@ -195,20 +195,20 @@ a:active {
 .blog-button:focus .icon,
 .blog-button:hover .icon,
 .blog-button:active .icon {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .blog-button .icon {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .blog-button .label {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .mail {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
   height: 96vh;
   position: relative;
   text-align: center;
@@ -224,8 +224,8 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .mail-button .icon {
   display: block;
@@ -267,22 +267,22 @@ a:active {
   text-decoration: underline;
 }
 .mail-button .icon {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .mail-button .label {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .mail-button:focus .icon,
 .mail-button:hover .icon,
 .mail-button:active .icon {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .socials {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
   height: 96vh;
   text-align: center;
 }
@@ -318,8 +318,8 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .twitter-button .icon {
   display: block;
@@ -363,16 +363,16 @@ a:active {
 .twitter-button:focus .icon,
 .twitter-button:hover .icon,
 .twitter-button:active .icon {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .twitter-button .icon {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .twitter-button .label {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .github-button {
   display: block;
@@ -385,8 +385,8 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .github-button .icon {
   display: block;
@@ -430,16 +430,16 @@ a:active {
 .github-button:focus .icon,
 .github-button:hover .icon,
 .github-button:active .icon {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .github-button .icon {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .github-button .label {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .hatena-button {
   display: block;
@@ -452,8 +452,8 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .hatena-button .icon {
   display: block;
@@ -497,35 +497,35 @@ a:active {
 .hatena-button:focus .icon,
 .hatena-button:hover .icon,
 .hatena-button:active .icon {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .hatena-button .icon {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .hatena-button .label {
-  color: #4f6c42;
-  background-color: #eef3ec;
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .fa-hatena:before {
   content: "\f128";
 }
 .root-footer {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
   text-align: center;
   height: 90vh;
   line-height: 90vh;
 }
 .copyright-name {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
   display: inline-block;
 }
 .copyright-name:focus,
 .copyright-name:hover,
 .copyright-name:active {
-  color: #eef3ec;
-  background-color: #4f6c42;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
