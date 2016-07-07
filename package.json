@@ -13,6 +13,7 @@
   "devDependencies": {
     "b-html-cli": "0.3.1",
     "browser-sync": "^2.13.0",
+    "mkdirp": "0.5.1",
     "npm-run-all": "2.3.0",
     "rimraf": "2.5.3",
     "stylus": "0.54.5",
@@ -32,6 +33,7 @@
     "build:bhtml": "b-html -o './public/' './src/'",
     "build:styl": "stylus './src/styles/default.styl' -o './public/styles/'",
     "clean": "rimraf './public/*.html' './public/styles/*.css'",
+    "prebuild": "mkdirp public/styles",
     "watch": "npm-run-all -p 'watch:start' 'watch:bhtml' 'watch:styl'",
     "watch:bhtml": "watch --wait 2 'npm-run-all -s \"build:bhtml\" \"watch:reload\"' './src/'",
     "watch:reload": "browser-sync reload",
