@@ -54,9 +54,25 @@ button()
     height 25%
     line-height ($button-height * 1 / 4)
 
+    .text
+      position relative
+
+      &::after
+        position absolute
+        content ""
+        display block
+        width 100%
+        height 0.5vh
+        transform scaleX(0)
+        bottom 0
+        left 0
+        transition all 0.3s
+
   &:focus, &:hover, &:active
     .label
-      text-decoration underline
+      .text
+        &::after
+          transform scaleX(1)
 
 dark-button()
   button()
@@ -67,6 +83,10 @@ dark-button()
 
   .label
     dark-color()
+
+    .text
+      &::after
+        light-color()
 
   &:focus, &:hover, &:active
     .icon
@@ -79,9 +99,16 @@ light-button()
   &:focus, &:hover, &:active
     .icon
       dark-color()
+    .text
+      &::after
+        dark-color()
 
   .icon
     light-color()
 
   .label
     light-color()
+
+    .text
+      &::after
+        dark-color()

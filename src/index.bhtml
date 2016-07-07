@@ -67,7 +67,9 @@
               @src /images/bouzuya-icon-v3.png
             <span
               @class label
-              >bouzuya
+              <span
+                @class text
+                >bouzuya
         <li
           @class blog
           <a
@@ -79,7 +81,9 @@
               @class icon fa fa-pencil
             <span
               @class label
-              >blog.bouzuya.net
+              <span
+                @class text
+                >blog.bouzuya.net
         <li
           @class mail
           <a
@@ -91,8 +95,10 @@
               @class icon fa fa-envelope-o
             <span
               @class label
-              <address
-                >mail@bouzuya.net
+              <span
+                @class text
+                <address
+                  >mail@bouzuya.net
     <section
       @class socials
       <ul
@@ -107,7 +113,9 @@
               @class icon fa fa-twitter
             <span
               @class label
-              >Twitter
+              <span
+                @class text
+                >Twitter
         <li
           @class social
           <a
@@ -119,7 +127,9 @@
               @class icon fa fa-github-square
             <span
               @class label
-              >GitHub
+              <span
+                @class text
+                >GitHub
         <li
           @class social
           <a
@@ -131,7 +141,9 @@
               @class icon fa fa-hatena
             <span
               @class label
-              >Hatena
+              <span
+                @class text
+                >Hatena
     <footer
       @class root-footer
       <p

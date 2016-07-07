@@ -29,24 +29,60 @@ address
 a
   text-decoration none
 
-  &:focus, &:hover, &:active
-    text-decoration underline
-
 // other
 
-.root-header
+.root-header,
+.root-footer
   text-align center
 
-.title
-  light-color()
-
-  font-size 8vh
+.title,
+.copyright
   height 96vh
   line-height 96vh
   margin 0
 
   a
+    &::after
+      position absolute
+      content ""
+      display block
+      width 100%
+      height 0.5vh
+      transform scaleX(0)
+      bottom 0
+      left 0
+      transition all 0.3s
+
+    &:focus, &:hover, &:active
+      &::after
+        transform scaleX(1)
+
+
+.title
+  light-color()
+
+  font-size 8vh
+
+  a
     light-color()
+
+    position relative
+
+    &::after
+      dark-color()
+
+.copyright
+  dark-color()
+
+  font-size 6vh
+
+  a
+    dark-color()
+
+    position relative
+
+    &::after
+      light-color()
 
 .about
   dark-color()
@@ -66,24 +102,21 @@ a
     border-radius 0
     vertical-align middle
 
-.blog
-  light-color()
-
+.blog,
+.mail
   font-size 5vh
   height 48vh
   position relative
   text-align center
+
+.blog
+  light-color()
 
 .blog-button
   light-button()
 
 .mail
   dark-color()
-
-  font-size 5vh
-  height 48vh
-  position relative
-  text-align center
 
 .mail-button
   dark-button()
@@ -112,18 +145,10 @@ a
 .fa-hatena:before
   content "\f128"
 
-.root-footer
-  dark-color()
-
-  font-size 6vh
-  text-align center
-  height 96vh
-  line-height 96vh
-
 .copyright-name
   dark-color()
 
-  display inline-block
+  display inline
 
   &:focus, &:hover, &:active
     dark-color()
