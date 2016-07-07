@@ -1,10 +1,9 @@
-:root {
-  font-size: 16px;
-}
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 62.5%;
+  min-width: 56.25vh;
+  background-color: #f4f7f2;
 }
 html,
 body {
@@ -26,30 +25,69 @@ address {
 a {
   text-decoration: none;
 }
-a:focus,
-a:hover,
-a:active {
-  text-decoration: underline;
-}
-.root-header {
+.root-header,
+.root-footer {
   text-align: center;
+}
+.title,
+.copyright {
+  height: 96vh;
+  line-height: 96vh;
+  margin: 0;
+}
+.title a::after,
+.copyright a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5vh;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.title a:focus::after,
+.copyright a:focus::after,
+.title a:hover::after,
+.copyright a:hover::after,
+.title a:active::after,
+.copyright a:active::after {
+  transform: scaleX(1);
 }
 .title {
   color: #4e6a41;
   background-color: #f4f7f2;
-  font-size: 48px;
-  height: 90vh;
-  line-height: 90vh;
-  margin: 0;
+  font-size: 8vh;
 }
 .title a {
+  color: #4e6a41;
+  background-color: #f4f7f2;
+  position: relative;
+}
+.title a::after {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+}
+.copyright {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+  font-size: 6vh;
+}
+.copyright a {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+  position: relative;
+}
+.copyright a::after {
   color: #4e6a41;
   background-color: #f4f7f2;
 }
 .about {
   color: #f4f7f2;
   background-color: #4e6a41;
-  height: 90vh;
+  font-size: 6vh;
+  height: 96vh;
   position: relative;
   text-align: center;
 }
@@ -64,6 +102,7 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
+  overflow: hidden;
   color: #f4f7f2;
   background-color: #4e6a41;
 }
@@ -71,12 +110,13 @@ a:active {
   display: block;
   position: relative;
   margin: auto;
-  width: 37.5%;
-  height: 75%;
+  width: 24vh;
+  height: 24vh;
   line-height: 24vh;
-  font-size: 4rem;
+  font-size: 12vh;
   border-radius: 50%;
   overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
 }
 .about-button .icon:focus,
 .about-button .icon:hover,
@@ -101,10 +141,24 @@ a:active {
   height: 25%;
   line-height: 8vh;
 }
-.about-button:focus .label,
-.about-button:hover .label,
-.about-button:active .label {
-  text-decoration: underline;
+.about-button .label .text {
+  position: relative;
+}
+.about-button .label .text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5vh;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.about-button:focus .label .text::after,
+.about-button:hover .label .text::after,
+.about-button:active .label .text::after {
+  transform: scaleX(1);
 }
 .about-button .icon {
   color: #f4f7f2;
@@ -113,6 +167,10 @@ a:active {
 .about-button .label {
   color: #f4f7f2;
   background-color: #4e6a41;
+}
+.about-button .label .text::after {
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .about-button:focus .icon,
 .about-button:hover .icon,
@@ -127,17 +185,18 @@ a:active {
 }
 .about-button .icon {
   border-radius: 0;
-  font-family: 'Fredoka One';
-  font-weight: normal;
-  font-style: normal;
   vertical-align: middle;
+}
+.blog,
+.mail {
+  font-size: 5vh;
+  height: 48vh;
+  position: relative;
+  text-align: center;
 }
 .blog {
   color: #4e6a41;
   background-color: #f4f7f2;
-  height: 96vh;
-  position: relative;
-  text-align: center;
 }
 .blog-button {
   display: block;
@@ -150,6 +209,7 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
+  overflow: hidden;
   color: #4e6a41;
   background-color: #f4f7f2;
 }
@@ -157,12 +217,13 @@ a:active {
   display: block;
   position: relative;
   margin: auto;
-  width: 37.5%;
-  height: 75%;
+  width: 24vh;
+  height: 24vh;
   line-height: 24vh;
-  font-size: 4rem;
+  font-size: 12vh;
   border-radius: 50%;
   overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
 }
 .blog-button .icon:focus,
 .blog-button .icon:hover,
@@ -187,14 +248,34 @@ a:active {
   height: 25%;
   line-height: 8vh;
 }
-.blog-button:focus .label,
-.blog-button:hover .label,
-.blog-button:active .label {
-  text-decoration: underline;
+.blog-button .label .text {
+  position: relative;
+}
+.blog-button .label .text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5vh;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.blog-button:focus .label .text::after,
+.blog-button:hover .label .text::after,
+.blog-button:active .label .text::after {
+  transform: scaleX(1);
 }
 .blog-button:focus .icon,
 .blog-button:hover .icon,
 .blog-button:active .icon {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+}
+.blog-button:focus .text::after,
+.blog-button:hover .text::after,
+.blog-button:active .text::after {
   color: #f4f7f2;
   background-color: #4e6a41;
 }
@@ -206,12 +287,13 @@ a:active {
   color: #4e6a41;
   background-color: #f4f7f2;
 }
+.blog-button .label .text::after {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+}
 .mail {
   color: #f4f7f2;
   background-color: #4e6a41;
-  height: 96vh;
-  position: relative;
-  text-align: center;
 }
 .mail-button {
   display: block;
@@ -224,6 +306,7 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
+  overflow: hidden;
   color: #f4f7f2;
   background-color: #4e6a41;
 }
@@ -231,12 +314,13 @@ a:active {
   display: block;
   position: relative;
   margin: auto;
-  width: 37.5%;
-  height: 75%;
+  width: 24vh;
+  height: 24vh;
   line-height: 24vh;
-  font-size: 4rem;
+  font-size: 12vh;
   border-radius: 50%;
   overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
 }
 .mail-button .icon:focus,
 .mail-button .icon:hover,
@@ -261,10 +345,24 @@ a:active {
   height: 25%;
   line-height: 8vh;
 }
-.mail-button:focus .label,
-.mail-button:hover .label,
-.mail-button:active .label {
-  text-decoration: underline;
+.mail-button .label .text {
+  position: relative;
+}
+.mail-button .label .text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5vh;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.mail-button:focus .label .text::after,
+.mail-button:hover .label .text::after,
+.mail-button:active .label .text::after {
+  transform: scaleX(1);
 }
 .mail-button .icon {
   color: #f4f7f2;
@@ -274,38 +372,29 @@ a:active {
   color: #f4f7f2;
   background-color: #4e6a41;
 }
+.mail-button .label .text::after {
+  color: #4e6a41;
+  background-color: #f4f7f2;
+}
 .mail-button:focus .icon,
 .mail-button:hover .icon,
 .mail-button:active .icon {
   color: #4e6a41;
   background-color: #f4f7f2;
 }
-.socials {
-  color: #4e6a41;
-  background-color: #f4f7f2;
-  height: 96vh;
+.social {
+  font-size: 6vh;
+  height: 48vh;
+  position: relative;
   text-align: center;
 }
-@media screen and (max-width: 960px) {
-  .socials {
-    height: 288vh;
-  }
+.social:nth-child(odd) {
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
-.socials:after {
-  content: " ";
-  clear: both;
-}
-.social {
-  float: left;
-  width: 33.3%;
-  display: block;
-  height: 96vh;
-  position: relative;
-}
-@media screen and (max-width: 960px) {
-  .social {
-    width: 100%;
-  }
+.social:nth-child(even) {
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .twitter-button {
   display: block;
@@ -318,6 +407,7 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
+  overflow: hidden;
   color: #4e6a41;
   background-color: #f4f7f2;
 }
@@ -325,12 +415,13 @@ a:active {
   display: block;
   position: relative;
   margin: auto;
-  width: 37.5%;
-  height: 75%;
+  width: 24vh;
+  height: 24vh;
   line-height: 24vh;
-  font-size: 4rem;
+  font-size: 12vh;
   border-radius: 50%;
   overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
 }
 .twitter-button .icon:focus,
 .twitter-button .icon:hover,
@@ -355,14 +446,34 @@ a:active {
   height: 25%;
   line-height: 8vh;
 }
-.twitter-button:focus .label,
-.twitter-button:hover .label,
-.twitter-button:active .label {
-  text-decoration: underline;
+.twitter-button .label .text {
+  position: relative;
+}
+.twitter-button .label .text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5vh;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.twitter-button:focus .label .text::after,
+.twitter-button:hover .label .text::after,
+.twitter-button:active .label .text::after {
+  transform: scaleX(1);
 }
 .twitter-button:focus .icon,
 .twitter-button:hover .icon,
 .twitter-button:active .icon {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+}
+.twitter-button:focus .text::after,
+.twitter-button:hover .text::after,
+.twitter-button:active .text::after {
   color: #f4f7f2;
   background-color: #4e6a41;
 }
@@ -373,6 +484,10 @@ a:active {
 .twitter-button .label {
   color: #4e6a41;
   background-color: #f4f7f2;
+}
+.twitter-button .label .text::after {
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .github-button {
   display: block;
@@ -385,19 +500,21 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
-  color: #4e6a41;
-  background-color: #f4f7f2;
+  overflow: hidden;
+  color: #f4f7f2;
+  background-color: #4e6a41;
 }
 .github-button .icon {
   display: block;
   position: relative;
   margin: auto;
-  width: 37.5%;
-  height: 75%;
+  width: 24vh;
+  height: 24vh;
   line-height: 24vh;
-  font-size: 4rem;
+  font-size: 12vh;
   border-radius: 50%;
   overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
 }
 .github-button .icon:focus,
 .github-button .icon:hover,
@@ -422,22 +539,40 @@ a:active {
   height: 25%;
   line-height: 8vh;
 }
-.github-button:focus .label,
-.github-button:hover .label,
-.github-button:active .label {
-  text-decoration: underline;
+.github-button .label .text {
+  position: relative;
+}
+.github-button .label .text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5vh;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.github-button:focus .label .text::after,
+.github-button:hover .label .text::after,
+.github-button:active .label .text::after {
+  transform: scaleX(1);
+}
+.github-button .icon {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+}
+.github-button .label {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+}
+.github-button .label .text::after {
+  color: #4e6a41;
+  background-color: #f4f7f2;
 }
 .github-button:focus .icon,
 .github-button:hover .icon,
 .github-button:active .icon {
-  color: #f4f7f2;
-  background-color: #4e6a41;
-}
-.github-button .icon {
-  color: #4e6a41;
-  background-color: #f4f7f2;
-}
-.github-button .label {
   color: #4e6a41;
   background-color: #f4f7f2;
 }
@@ -452,6 +587,7 @@ a:active {
   max-width: 100%;
   width: 64vh;
   height: 32vh;
+  overflow: hidden;
   color: #4e6a41;
   background-color: #f4f7f2;
 }
@@ -459,12 +595,13 @@ a:active {
   display: block;
   position: relative;
   margin: auto;
-  width: 37.5%;
-  height: 75%;
+  width: 24vh;
+  height: 24vh;
   line-height: 24vh;
-  font-size: 4rem;
+  font-size: 12vh;
   border-radius: 50%;
   overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
 }
 .hatena-button .icon:focus,
 .hatena-button .icon:hover,
@@ -489,14 +626,34 @@ a:active {
   height: 25%;
   line-height: 8vh;
 }
-.hatena-button:focus .label,
-.hatena-button:hover .label,
-.hatena-button:active .label {
-  text-decoration: underline;
+.hatena-button .label .text {
+  position: relative;
+}
+.hatena-button .label .text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5vh;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.hatena-button:focus .label .text::after,
+.hatena-button:hover .label .text::after,
+.hatena-button:active .label .text::after {
+  transform: scaleX(1);
 }
 .hatena-button:focus .icon,
 .hatena-button:hover .icon,
 .hatena-button:active .icon {
+  color: #f4f7f2;
+  background-color: #4e6a41;
+}
+.hatena-button:focus .text::after,
+.hatena-button:hover .text::after,
+.hatena-button:active .text::after {
   color: #f4f7f2;
   background-color: #4e6a41;
 }
@@ -508,20 +665,17 @@ a:active {
   color: #4e6a41;
   background-color: #f4f7f2;
 }
-.fa-hatena:before {
-  content: "\f128";
-}
-.root-footer {
+.hatena-button .label .text::after {
   color: #f4f7f2;
   background-color: #4e6a41;
-  text-align: center;
-  height: 90vh;
-  line-height: 90vh;
+}
+.fa-hatena:before {
+  content: "\f128";
 }
 .copyright-name {
   color: #f4f7f2;
   background-color: #4e6a41;
-  display: inline-block;
+  display: inline;
 }
 .copyright-name:focus,
 .copyright-name:hover,
