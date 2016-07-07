@@ -23,14 +23,6 @@ gulp.task 'build:stylus', ->
   .pipe stylus()
   .pipe gulp.dest './public/styles/'
 
-gulp.task 'default', (done) ->
-  run.apply run, [
-    'clean'
-    'build'
-    done
-  ]
-  null
-
 gulp.task 'watch', ['build'], ->
   browserSync
     server:
