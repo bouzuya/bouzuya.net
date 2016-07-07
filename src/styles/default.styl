@@ -3,13 +3,11 @@
 
 // reset & base
 
-:root
-  font-size 16px
-
 body
   font-family $font1, sans-serif
   font-weight bold
-  font-size 2rem
+  font-size 62.5%
+  min-width 56.25vh // w:h=9:16
 
 html, body
   margin 0
@@ -41,9 +39,9 @@ a
 .title
   light-color()
 
-  font-size 48px
-  height 90vh
-  line-height 90vh
+  font-size 8vh
+  height 96vh
+  line-height 96vh
   margin 0
 
   a
@@ -52,7 +50,8 @@ a
 .about
   dark-color()
 
-  height 90vh
+  font-size 6vh
+  height 96vh
   position relative
   text-align center
 
@@ -69,7 +68,8 @@ a
 .blog
   light-color()
 
-  height 96vh
+  font-size 5vh
+  height 48vh
   position relative
   text-align center
 
@@ -79,41 +79,31 @@ a
 .mail
   dark-color()
 
-  height 96vh
+  font-size 5vh
+  height 48vh
   position relative
   text-align center
 
 .mail-button
   dark-button()
 
-.socials
-  light-color()
-
-  height 96vh
+.social
+  font-size 6vh
+  height 48vh
+  position relative
   text-align center
 
-  @media screen and (max-width: 960px)
-    height 96 * 3vh
+  &:nth-child(odd)
+    light-color()
 
-  &:after
-    content " "
-    clear both
-
-.social
-  float left
-  width 33.3%
-  display block
-  height 96vh
-  position relative
-
-  @media screen and (max-width: 960px)
-    width 100%
+  &:nth-child(even)
+    dark-color()
 
 .twitter-button
   light-button()
 
 .github-button
-  light-button()
+  dark-button()
 
 .hatena-button
   light-button()
@@ -123,9 +113,11 @@ a
 
 .root-footer
   dark-color()
+
+  font-size 6vh
   text-align center
-  height 90vh
-  line-height 90vh
+  height 96vh
+  line-height 96vh
 
 .copyright-name
   dark-color()
