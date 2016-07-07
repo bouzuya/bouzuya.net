@@ -1,6 +1,5 @@
 bHtml = require 'gulp-b-html'
 browserSync = require 'browser-sync'
-del = require 'del'
 gulp = require 'gulp'
 gutil = require 'gulp-util'
 stylus = require 'gulp-stylus'
@@ -23,13 +22,6 @@ gulp.task 'build:stylus', ->
   gulp.src './src/styles/*.styl'
   .pipe stylus()
   .pipe gulp.dest './public/styles/'
-
-gulp.task 'clean', (done) ->
-  del [
-    './public/*.html'
-    './public/styles/*.css'
-  ], done
-  null
 
 gulp.task 'default', (done) ->
   run.apply run, [

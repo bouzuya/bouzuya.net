@@ -13,12 +13,12 @@
   "devDependencies": {
     "browser-sync": "^2.7.10",
     "coffee-script": "^1.9.3",
-    "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-b-html": "^0.2.0",
     "gulp-stylus": "^2.1.1",
     "gulp-util": "^3.0.5",
     "gulp-watch": "^4.2.4",
+    "rimraf": "2.5.3",
     "run-sequence": "^1.1.0"
   },
   "homepage": "http://bouzuya.net",
@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build": "gulp",
-    "clean": "gulp clean",
+    "clean": "rimraf './public/*.html' './public/styles'",
     "watch": "gulp watch"
   }
 }
