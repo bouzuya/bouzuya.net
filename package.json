@@ -21,7 +21,8 @@
     "gulp-watch": "^4.2.4",
     "npm-run-all": "2.3.0",
     "rimraf": "2.5.3",
-    "run-sequence": "^1.1.0"
+    "run-sequence": "^1.1.0",
+    "stylus": "0.54.5"
   },
   "homepage": "http://bouzuya.net",
   "keywords": [
@@ -33,9 +34,9 @@
     "url": "git://github.com/bouzuya/bouzuya.net"
   },
   "scripts": {
-    "build": "npm-run-all 'clean' 'build:bhtml' 'build:gulp'",
+    "build": "npm-run-all -s 'clean' -p 'build:*'",
     "build:bhtml": "b-html -o './public/' './src/'",
-    "build:gulp": "gulp build",
+    "build:styl": "stylus './src/styles/default.styl' -o './public/styles/'",
     "clean": "rimraf './public/*.html' './public/styles'",
     "watch": "gulp watch"
   }
