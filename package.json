@@ -12,17 +12,11 @@
   },
   "devDependencies": {
     "b-html-cli": "0.3.1",
-    "browser-sync": "^2.7.10",
-    "coffee-script": "^1.9.3",
-    "gulp": "^3.9.0",
-    "gulp-b-html": "^0.2.0",
-    "gulp-stylus": "^2.1.1",
-    "gulp-util": "^3.0.5",
-    "gulp-watch": "^4.2.4",
+    "browser-sync": "^2.13.0",
     "npm-run-all": "2.3.0",
     "rimraf": "2.5.3",
-    "run-sequence": "^1.1.0",
-    "stylus": "0.54.5"
+    "stylus": "0.54.5",
+    "watch": "0.19.1"
   },
   "homepage": "http://bouzuya.net",
   "keywords": [
@@ -37,7 +31,11 @@
     "build": "npm-run-all -s 'clean' -p 'build:*'",
     "build:bhtml": "b-html -o './public/' './src/'",
     "build:styl": "stylus './src/styles/default.styl' -o './public/styles/'",
-    "clean": "rimraf './public/*.html' './public/styles'",
-    "watch": "gulp watch"
+    "clean": "rimraf './public/*.html' './public/styles/*.css'",
+    "watch": "npm-run-all -p 'watch:start' 'watch:bhtml' 'watch:styl'",
+    "watch:bhtml": "watch --wait 2 'npm-run-all -s \"build:bhtml\" \"watch:reload\"' './src/'",
+    "watch:reload": "browser-sync reload",
+    "watch:start": "browser-sync start -s './public'",
+    "watch:styl": "watch --wait 2 'npm-run-all -s \"build:styl\" \"watch:reload\"' './src/styles/'"
   }
 }
