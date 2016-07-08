@@ -13,6 +13,7 @@
   "devDependencies": {
     "b-html-cli": "0.3.1",
     "browser-sync": "2.13.0",
+    "clean-css": "3.4.18",
     "mkdirp": "0.5.1",
     "npm-run-all": "2.3.0",
     "rimraf": "2.5.3",
@@ -29,8 +30,9 @@
     "url": "git://github.com/bouzuya/bouzuya.net"
   },
   "scripts": {
-    "build": "npm-run-all -s 'clean' -p 'build:*'",
+    "build": "npm-run-all -s 'clean' -p 'build:bhtml' 'build:styl' -s 'build:css'",
     "build:bhtml": "b-html -o './public/' './src/'",
+    "build:css": "cleancss './public/styles/default.css' -o './public/styles/default.css'",
     "build:styl": "stylus './src/styles/default.styl' -o './public/styles/'",
     "clean": "rimraf './public/*.html' './public/styles/*.css'",
     "prebuild": "mkdirp public/styles",
