@@ -42,21 +42,20 @@ a
   margin 0
 
   a
+    display inline-block
+    line-height 1
+
     &::after
-      position absolute
       content ""
       display block
-      width 100%
       height 0.5vh
-      transform scaleX(0)
-      bottom 0
-      left 0
-      transition all 0.3s
+      margin auto
+      width 0
+      transition width 0.3s
 
     &:focus, &:hover, &:active
       &::after
-        transform scaleX(1)
-
+        width 100%
 
 .title
   light-color()
@@ -65,8 +64,6 @@ a
 
   a
     light-color()
-
-    position relative
 
     &::after
       dark-color()
@@ -78,8 +75,6 @@ a
 
   a
     dark-color()
-
-    position relative
 
     &::after
       light-color()

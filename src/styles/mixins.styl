@@ -56,24 +56,22 @@ button()
     line-height ($button-height * 1 / 4)
 
     .text
-      position relative
+      display inline-block
+      line-height 1
 
       &::after
-        position absolute
         content ""
         display block
-        width 100%
+        width 0
+        margin auto
         height 0.5vh
-        transform scaleX(0)
-        bottom 0
-        left 0
-        transition all 0.3s
+        transition width 0.3s
 
   &:focus, &:hover, &:active
     .label
       .text
         &::after
-          transform scaleX(1)
+          width 100%
 
 dark-button()
   button()
