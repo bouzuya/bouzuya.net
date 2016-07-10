@@ -1,7 +1,7 @@
 {
   "name": "bouzuya.net",
   "description": "bouzuya's web site.",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "author": {
     "name": "bouzuya",
     "email": "bouzuya@gmail.com",
@@ -36,6 +36,7 @@
     "build:styl": "stylus './src/styles/default.styl' -o './public/styles/'",
     "clean": "rimraf './public/*.html' './public/styles/*.css'",
     "prebuild": "mkdirp public/styles",
+    "prepublish": "npm-run-all -s 'clean' 'build'",
     "watch": "npm-run-all -p 'watch:start' 'watch:bhtml' 'watch:styl'",
     "watch:bhtml": "watch --wait 2 'npm-run-all -s \"build:bhtml\" \"watch:reload\"' './src/'",
     "watch:reload": "browser-sync reload",
