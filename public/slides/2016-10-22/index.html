@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>WHATWG Streams をためした - 2016-10-22 Kyoto.js #11 bouzuya</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic" />
+    <style type="text/css">
+      /* bouzuya green: rgb(78, 106, 65) */
+      /* bouzuya white: rgb(244, 247, 242) */
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+      .remark-slide-content {
+        color: rgb(244, 247, 242);
+        background-color: rgb(78, 106, 65);
+        font-size: 24px;
+        line-height: 1.6;
+      }
+      .remark-slide-content a {
+        color: rgb(244, 247, 242);
+        text-decoration: underline;
+      }
+      .remark-slide-content blockquote footer {
+        text-align: right;
+      }
+      .remark-inline-code {
+        font-family: 'Ubuntu Mono';
+        background-color: hsl(101, 24%, 23%);
+      }
+      .remark-code.hljs {
+        font-family: 'Ubuntu Mono';
+        background-color: #333;
+        color: rgb(244, 247, 242);
+      }
+      .remark-code.hljs .hljs-built_in {
+        color: rgb(244, 247, 242);
+      }
+      .remark-code.hljs .hljs-comment {
+        color: #608b4e;
+      }
+      .remark-code.hljs .hljs-keyword {
+        color: #569cd6;
+      }
+      .remark-code.hljs .hljs-literal {
+        color: #569cd6;
+      }
+      .remark-code.hljs .hljs-number {
+        color: #b5cea8;
+      }
+      .remark-code.hljs .hljs-string {
+        color: #ce9178;
+      }
+      .remark-code.hljs .hljs-title {
+        color: rgb(244, 247, 242);
+      }
+      .remark-slide-content.first h1 {
+        font-size: 45px; /* = h2 */
+        font-weight: bold;
+      }
+      .remark-slide-content.profile p {
+        margin: 0;
+      }
+      .remark-slide-content.profile img {
+        width: 192px;
+        height: auto;
+      }
+      .remark-slide-content.profile .name {
+        font-size: 45px;
+        font-weight: bold;
+      }
+      .remark-slide-content.profile-links ul {
+        font-size: 40px;
+        line-height: 1.75;
+        list-style-type: none;
+        text-align: center;
+      }
+      .remark-slide-content.streams ol {
+        font-size: 32px;
+        line-height: 1.75;
+      }
+      .remark-slide-content.source-and-shink ol {
+        font-size: 32px;
+        line-height: 1.75;
+      }
+      .remark-slide-content.pipe-chain ol {
+        font-size: 32px;
+        line-height: 1.75;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, first
+
+# WHATWG Streams をためした
+
+2016-10-22 Kyoto.js #11 [bouzuya](http://bouzuya.net)
+
+---
+
+class: center, middle
+
+# ぼく
+
+---
+
+class: center, middle, profile
+
+![bouzuya icon](http://bouzuya.net/images/bouzuya-icon-v3.png)
+
+.name[bouzuya]
+
+---
+
+class: middle, profile-links
+
+- [github.com/**bouzuya**](https://github.com/bouzuya)
+- [hatena.ne.jp/**bouzuya**](http://hatena.ne.jp/bouzuya)
+- [twitter.com/**bouzuya**](https://twitter.com/bouzuya)
+
+---
+
+## [FaithCreates Inc.](https://faithcreates.co.jp)
+
+- 神戸 (Kobe)
+- Web + Android + iOS
+
+## [RALLY](https://rallyapp.jp)
+
+- 誰でも簡単にスタンプラリーをつくれるサービス
+- CoffeeScript + AngularJS
+- Ruby + Ruby on Rails
+
+---
+
+class: center, middle
+
+# WHATWG Streams
+
+---
+
+class: center, middle
+
+## 調査: 認知度は？
+
+---
+
+class: center, middle
+
+## そもそも Stream って何？
+
+---
+
+class: center, middle
+
+名前からすると流れるもの？
+
+---
+
+class: middle
+
+> web プラットフォームの相当部分は、ストリーミングデータ上に築かれている： すなわち，データは、**全部を記憶域内に読取ることなく，増分的なやり方で、作成され, 処理され, 消費される**。
+>
+> <footer>――<cite><a href="https://triple-underscore.github.io/Streams-ja.html">WHATWG Streams 日本語訳</a></cite></footer>
+
+---
+
+### ぼくの中での Stream
+
+- データ構造の一種
+- データを**ひとつ**ではなく**連続したいくつか**のものとして扱える
+- データを**一度**ではなく**連続した何度か**で処理できる
+- データを流せる・データが流れてくる
+
+### 具体例 (JS)
+
+- Node.js Stream
+- gulp
+- RxJS Observable / ES.next Observable
+
+---
+
+class: center, middle
+
+## WHATWG Streams 策定の経緯
+
+---
+
+class: center, middle
+
+### 知らない。興味ない。
+
+想像: WHATWG Fetch が一括ドンだからでは……
+
+---
+
+class: center, middle
+
+(5 min)
+
+---
+
+class: streams
+
+# 3 つの Stream クラス
+
+1. ReadableStream
+2. WritableStream
+3. TransformStream
+
+---
+
+## 1. ReadableStream
+
+- 読み取りのための Stream
+- Source から読んだデータを内部キューにためる
+
+```javascript
+class ReadableStream {
+  constructor(underlyingSource: Source, options?: ReadableStreamOptions);
+  get locked(): boolean;
+  cancel(reason: any): Promise<void>;
+  getReader(): Reader;
+  pipeThrough(
+    transform: TransformStream, options?: PipeToOptions
+  ): ReadableStream;
+  pipeTo(writable: WritableStream, options?: PipeToOptions): Promise<void>;
+  tee(): [ReadableStream, ReadableStream];
+}
+```
+
+---
+
+## 2. WritableStream
+
+- 書き込みのための Stream
+- Sink に書くデータを内部キューにためる
+
+```javascript
+class WritableStream {
+  constructor(underlyingSink: Sink, options?: WritableStreamOptions);
+  get locked(): boolean;
+  abort(reason: any): Promise<void>;
+  getWriter(): Writer;
+}
+```
+
+---
+
+## 3. TransformStream
+
+- 変換のための Stream
+- **まだ仕様にない**
+
+```javascript
+class TransformStream {
+  constructor(transformer: Transformer);
+  get readable(): ReadableStream;
+  get writable(): WritableStream;
+}
+```
+
+---
+
+# Pipe chain (1)
+
+- 3 種の Stream を **pipe** する (= **pipe chain** をつくる)
+  - RS -(pipe)-> WS
+  - RS -(pipe)-> TS -(pipe)-> ... -(pipe)-> WS
+  - RS -(pipe)-> WS + RS -(pipe)-> WS
+- pipe chain を **chunk** が流れる
+  - chunk は RS / WS が読み書きするデータの単位
+
+---
+
+class: middle
+
+```javascript
+const data = [1, 2, 3];
+new ReadableStream({
+  pull(controller) {
+    const chunk = data.shift();
+    controller.enqueue(chunk); // 1, 2, 3
+  }
+})
+  .pipeThrough(new TransformStream({
+    transform(chunk, controller) {
+      controller.enqueue(chunk * 2);
+    }
+  }))
+  .pipeTo(new WritableStream({
+    write(chunk) {
+      console.log(chunk); // 2, 4, 6
+    }
+  }));
+```
+
+---
+
+class: source-and-shink
+
+# Source と Sink
+
+1. Underlying Source
+2. Underlying Sink
+
+---
+
+## 1. Source
+
+- RS に wrap されるデータの発生源
+- Push / Pull の違いを吸収する
+  - Push Source 例: TCP ソケット
+  - Pull Source 例: ファイルハンドル
+- Backpressure を考慮する (後述)
+
+```javascript
+interface Source {
+  type?: 'bytes' | undefined;
+  start?(controller: ReadableStreamController): Promise<void> | undefined;
+  pull?(controller: ReadableStreamController): Promise<void> | undefined;
+  cancel?(reason: any): Promise<void> | undefined;
+}
+```
+
+---
+
+## 2. Sink
+
+- WS に wrap されるデータの行き先
+- Backpressure を考慮する (後述)
+
+```javascript
+interface Sink {
+  start?(controller: WritableStreamController): Promise<void> | undefined;
+  write?(chunk: any): Promise<void> | undefined;
+  close?(): Promise<void> | undefined;
+  abort?(reason: any): Promise<void> | undefined;
+}
+```
+
+---
+
+## なぜ Source と Sink が重要か？
+
+- 使用時に RS / WS を継承しない
+- constructor に Source / Sink を指定する
+  - `new ReadableStream(source, options)`
+  - `new WritableStream(sink, options)`
+- Source / Sink はクラスとして提供されない
+- Source / Sink のインタフェースを実装する
+
+---
+
+class: middle
+
+```javascript
+const data = [1, 2, 3];
+new ReadableStream({ // **Source**
+  pull(controller) {
+    const chunk = data.shift();
+    controller.enqueue(chunk); // 1, 2, 3
+  }
+})
+  .pipeThrough(new TransformStream({
+    transform(chunk, controller) {
+      controller.enqueue(chunk * 2);
+    }
+  }))
+  .pipeTo(new WritableStream({ // **Sink**
+    write(chunk) {
+      console.log(chunk); // 2, 4, 6
+    }
+  }));
+```
+
+---
+
+class: pipe-chain
+
+# Pipe chain (2)
+
+1. ( Underlying Source )
+2. ReadableStream
+3. [ TransformStream ]
+4. WritableStream
+5. ( Underlying Sink )
+
+---
+
+class: center, middle
+
+(10 min)
+
+---
+
+# WHATWG Streams の特徴
+
+- ロック
+- バックプレッシャー
+
+---
+
+class: center, middle
+
+## ロック
+
+---
+
+### ReadableStream の読み取り操作
+
+- `pipeTo(writable: WS): Promise<void>` …… WS に pipe
+- `pipeThrough(transform: TS): RS` …… TS に pipe
+- `tee(): [RS, RS]` …… RS を分岐
+- `getReader(): Reader` …… 上 3 つの内部でも呼ばれる低レベルな操作
+
+---
+
+### ロックとは？
+
+- 制約: ひとつの RS は同時にひとつの Reader しか持てない
+- `getReader(): Reader` は Reader を確保 (=ロック) する
+  - Reader が開放されるまで別の Reader を確保できない
+  - 名前に反した破壊的な操作
+  - →すべての読み取り操作は破壊的な操作
+- `get locked(): boolean` でロックの有無を確認できる
+- Reader は RS の内部キューを dequeue する
+- WritableStream の `getWriter()` も同様
+- Node.js Stream / RxJS Observable とは大きく違う
+  - 比較は https://speakerdeck.com/jxck/stream-between-nodejs-and-whatwg
+
+---
+
+class: center, middle
+
+## バックプレッシャー
+
+---
+
+### バックプレッシャーとは？
+
+- 流量制御
+- 例: 書き込み中なのにどんどん読み込まれると詰まる
+- Promise で待たせる
+  - Source や Sink のメソッドの完了を伝える
+- QueuingStrategy で待たせる
+  - queue size で Source の `pull()` を待たせる
+
+---
+
+### Promise で待たせる
+
+```javascript
+let index = 0;
+new ReadableStream({
+  pull(controller) {
+    index += 1;
+    controller.enqueue(index);
+    // pull() は Promise の解決を待って (50+ ms 待って) 呼ばれる
+    return new Promise((ok) => setTimeout(ok, 50));
+  }
+})
+  .pipeTo(new WritableStream({
+    write(chunk) {
+      console.log(chunk);
+      // write() は Promise の解決を待って (100+ ms 待って) 呼ばれる
+      return new Promise((ok) => setTimeout(ok, 100));
+    }
+  }));
+```
+
+---
+
+### QueuingStrategy で待たせる
+
+- RS / WS の内部キューをどうためるかの戦略
+- 上限を超えると Source の `pull()` が呼ばれなくなる
+- ※ Source は無視して enqueue し続けることもできる。
+
+```javascript
+class CountQueuingStrategy {
+  constructor(options: { highWaterMark: number; });
+  get highWaterMark(): number; // queue size の限界。
+  size(_chunk: any): number; // chunk size の計算。このクラスでは常に 1 。
+}
+class ByteLengthQueuingStrategy {
+  constructor(options: { highWaterMark: number; });
+  get highWaterMark(): number;
+  size(chunk: { byteLength: number; }): number;
+}
+```
+
+---
+
+class: middle
+
+```javascript
+// Source が queue の size を気にしながら enqueue する例
+new ReadableStream({
+  start(controller) {
+    setTimeout(() => {
+      let index = 0;
+      while (controller.desiredSize > 0) { // queue に余裕がある限り enqueue
+        controller.enqueue(index++);
+      }
+      controller.close();
+    });
+  }
+}, new CountQueuingStrategy({ highWaterMark: 10 })) // queue は 10 個まで
+  .pipeTo(new WritableStream(...));
+```
+
+---
+
+class: center, middle
+
+(15 min)
+
+---
+
+class: center, middle
+
+# ためしてみた
+
+---
+
+## で、何に使う？
+
+- あくまで Stream はデータ構造
+- 何に使うかは自由
+
+## ぼくは
+
+- View + ViewModel / Model 間の data flow に使ってみたい
+- Flux + React からの unidirectional data flow なアレ
+- 時間もないので↓を実装した
+- **Cycle.js の adapter / run と TodoMVC (一部)**
+
+---
+
+class: center, middle
+
+## 結果
+
+[bouzuya/cycle-whatwg-streams-example][]
+
+[bouzuya/cycle-whatwg-streams-example]: https://github.com/bouzuya/cycle-whatwg-streams-example
+
+---
+
+## わかったこと
+
+- まず実装が NPM にない
+  - つくった→[bouzuya/whatwg-streams-b][]
+- そして helper (RxJS でいう operator) がない
+  - map / filter / reduce (scan) / merge など、なにもない
+  - つくった→ [bouzuya/whatwg-streams-fns][]
+- 意外と<del>快適</del> なんとかなる
+- Model は RxJS と比べれば simple ……な気がする
+- コアな操作って少ない (=いろいろ足りない)
+- pipeThrough の構造が好き
+  - 効率悪そう
+  - bind operator がほしくなりにくい
+  - TypeScript の型推論だと……
+
+[bouzuya/whatwg-streams-b]: https://github.com/bouzuya/whatwg-streams-b
+[bouzuya/whatwg-streams-fns]: https://github.com/bouzuya/whatwg-streams-fns
+
+---
+
+## おまけ
+
+```javascript
+// pipeThrough の実装
+pipeThrough({ readable, writable }, options) {
+  this.pipeTo(writable, options);
+  return readable;
+}
+```
+
+```javascript
+// bouzuya/whatwg-streams-fns の例
+import { from } from 'whatwg-streams-fns/from';
+import { map } from 'whatwg-streams-fns/map';
+import { filter } from 'whatwg-streams-fns/filter';
+
+from([1, 2, 3, 4, 5])
+.pipeThrough(map((i: number) => i * 2))
+.pipeThrough(filter((i: number) => i === 3))
+.pipeTo(new WritableStream({ write(c) { console.log(c); } }));
+```
+
+---
+
+class: center, middle, last
+
+# おしまい
+
+???
+
+ためすだけなら fetch で。Chrome で fetch すれば見れる。
+
+```
+window.fetch('http://bouzuya.net').then((response) => {
+  console.log(response.body);
+});
+```
+
+- response.body が ReadableStream
+- pipeTo & pipeThrough は存在しない
+- getReader() / locked / tee() は存在する
+- Firefox には response.body がない
+
+    </textarea>
+    <script src="/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
+
