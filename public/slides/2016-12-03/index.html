@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>2016: TypeScript &amp; Visual Studio Code - 2016-12-03 KFUG bouzuya</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic" />
+    <style type="text/css">
+      /* bouzuya green: rgb(78, 106, 65) */
+      /* bouzuya white: rgb(244, 247, 242) */
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+      .remark-slide-content {
+        color: rgb(244, 247, 242);
+        background-color: rgb(78, 106, 65);
+        font-size: 32px;
+        line-height: 1.6;
+      }
+      .remark-slide-content a {
+        color: rgb(244, 247, 242);
+        text-decoration: underline;
+      }
+      .remark-slide-content blockquote footer {
+        text-align: right;
+      }
+      .remark-inline-code {
+        font-family: 'Ubuntu Mono';
+        background-color: hsl(101, 24%, 23%);
+      }
+      .remark-code.hljs {
+        font-family: 'Ubuntu Mono';
+        background-color: #333;
+        color: rgb(244, 247, 242);
+      }
+      .remark-code.hljs .hljs-built_in {
+        color: rgb(244, 247, 242);
+      }
+      .remark-code.hljs .hljs-comment {
+        color: #608b4e;
+      }
+      .remark-code.hljs .hljs-keyword {
+        color: #569cd6;
+      }
+      .remark-code.hljs .hljs-literal {
+        color: #569cd6;
+      }
+      .remark-code.hljs .hljs-number {
+        color: #b5cea8;
+      }
+      .remark-code.hljs .hljs-string {
+        color: #ce9178;
+      }
+      .remark-code.hljs .hljs-title {
+        color: rgb(244, 247, 242);
+      }
+      .remark-slide-content.first h1 {
+        font-size: 56px; /* = h2 */
+        font-weight: bold;
+      }
+      .remark-slide-content.profile p {
+        margin: 0;
+      }
+      .remark-slide-content.profile img {
+        width: 192px;
+        height: auto;
+      }
+      .remark-slide-content.profile .name {
+        font-size: 56px;
+        font-weight: bold;
+      }
+      .remark-slide-content.streams ol {
+        font-size: 32px;
+        line-height: 1.75;
+      }
+      .remark-slide-content.source-and-shink ol {
+        font-size: 32px;
+        line-height: 1.75;
+      }
+      .remark-slide-content.pipe-chain ol {
+        font-size: 32px;
+        line-height: 1.75;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, first
+
+# 2016: TypeScript &amp; Visual Studio Code
+
+2016-12-03 KFUG [bouzuya](http://bouzuya.net)
+
+---
+
+class: center, middle, profile
+
+![bouzuya icon](http://bouzuya.net/images/bouzuya-icon-v3.png)
+
+.name[bouzuya]
+
+---
+
+class: center, middle
+
+bouzuya の 2016 の開発環境:
+
+---
+
+class: center, middle
+
+結論
+
+---
+
+class: center, middle
+
+TypeScript
+
+---
+
+class: center, middle
+
+TypeScript &amp; VS Code 安定
+
+---
+
+class: center, middle
+
+忘れたい苦労を思い出せない
+
+---
+
+class: center, middle
+
+(1 min)
+
+---
+
+class: center, middle
+
+どれくらい TypeScript だったのか
+
+---
+
+class: center, middle
+
+GitHub から curl &amp; jq で集計
+
+[https://github.com/bouzuya](https://github.com/bouzuya)
+
+---
+
+class: center, middle
+
+[https://github.com/bouzuya](https://github.com/bouzuya) <br />
+2016 新規公開リポジトリの言語別の割合
+
+![bouzuya の 2016 の新規公開リポジトリの言語別の割合](https://cloud.githubusercontent.com/assets/1221346/20748740/c4dd38e4-b732-11e6-9d32-06c87c500da7.png)
+
+---
+
+class: center, middle
+
+1. **TypeScript ( 50 / 72 ) **
+2. JavaScript ( 10 / 72 )
+3. CoffeeScript ( 6 / 72 )
+
+---
+
+class: center, middle
+
+[bouzuya/b-o-a][]
+
+![b-o-a](https://cloud.githubusercontent.com/assets/1221346/13554535/a97537aa-e3ed-11e5-8897-480f0c76c9c5.png)
+
+[bouzuya/b-o-a]: https://github.com/bouzuya/b-o-a
+
+---
+
+class: center, middle
+
+[bouzuya/beater][]
+
+![beater](https://cloud.githubusercontent.com/assets/1221346/15892977/e69386f0-2db7-11e6-9163-bcb2f2471581.png)
+
+[bouzuya/beater]: https://github.com/bouzuya/beater
+
+---
+
+class: center, middle
+
+TypeScript &amp; VS Code 安定
+
+---
+
+class: center, middle
+
+(2 min)
+
+---
+
+class: center, middle
+
+2016-09 TypeScript 2.0
+
+---
+
+class: center, middle
+
+`--strictNullChecks` / null 安全 (?)
+
+```typescript
+const s: string = null; // ERROR
+```
+
+---
+
+class: center, middle
+
+`@types/*`
+
+```bash
+$ npm install -D @types/sinon
+```
+
+---
+
+class: center, middle
+
+(3 min)
+
+---
+
+class: center, middle
+
+2016-03 Visual Studio Code 1.0
+
+---
+
+class: middle
+
+- 普通に使える
+- (TS) 型情報による補完
+- 変数のリネーム (TSX のプロパティまで！)
+- デバッガ
+- VS Code > Atom
+
+---
+
+class: center, middle
+
+TypeScript &amp; VS Code 安定
+
+---
+
+class: center, middle
+
+(4 min)
+
+---
+
+class: center, middle
+
+## 2017
+
+---
+
+class: center, middle
+
+PureScript
+
+[http://www.purescript.org](http://www.purescript.org/)
+
+---
+
+class: center, middle
+
+(bouzuya) PureScript Advent Calendar 2016
+
+[http://www.adventar.org/calendars/1494](http://www.adventar.org/calendars/1494)
+
+---
+
+class: center, middle
+
+bouzuya's RxJS Advent Calendar 2015
+
+[http://www.adventar.org/calendars/1200](http://www.adventar.org/calendars/1200)
+
+---
+
+class: center, middle
+
+PureScript 興味あれば、ぜひ
+
+---
+
+class: center, middle, profile
+
+![bouzuya icon](http://bouzuya.net/images/bouzuya-icon-v3.png)
+
+.name[bouzuya]
+
+    </textarea>
+    <script src="./remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
