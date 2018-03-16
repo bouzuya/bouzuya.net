@@ -67,6 +67,7 @@
             @href https://twitter.com/bouzuya/
             @title bouzuya
             <img
+              @alt bouzuya
               @class icon
               @src /images/bouzuya-icon-v3.png
             <span
