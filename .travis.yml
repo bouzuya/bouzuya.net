@@ -1,19 +1,19 @@
 sudo: required
 services:
-  - docker
+- docker
 language: node_js
 node_js:
-  - "8.10"
+- '8.10'
 after_success:
-  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker build -t bouzuya/bouzuya.net .
-  - docker push bouzuya/bouzuya.net
+- docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- docker build -t bouzuya/bouzuya.net .
+- docker push bouzuya/bouzuya.net
 deploy:
   provider: s3
   access_key_id:
-    secure: "dfHyShxR7gJSyUBG7tVVEI4Gaanv/H29VV/R+/1hLXHxSkyUiLLa2rzEGx7pSvQseS4/xId1OmkX0gTaMWkkNNC1vG1T+bPT+FPrsSp3HcYLps+YPcvJh/7QjpZH0WJfgSy0pYoluTQplz5/1zarpKW5GUyV5RbMu+Do5mUuBPY="
+    secure: FOGqBDlpUwCvtyf+j/Rztw265LuT7Oz6gtGyovgl1Sq89iJTVZtTAh/di17k4VSNoWVw6pxsXqoFxmOPu3lkldu3sNwHGGakFm+r9e//TvYfZ+ycXPmCvhvnfflfPLysu5AmfpvAHp07ybjx6QvngBChEo/OBOXYQOgZgVM3S7Q=
   secret_access_key:
-    secure: "j3D4T7ZfcltlqNGvBUvRXKxqffgNORgKFdM2FN956CCEdS6FZihMS6nyT18I5WLR7efDTEWM9MSWXNiFrp0Tq2HYcswhPI0UG7VfIyzCROpswujvQZzZZtYAKVANFGJC/0Agz6nQiQ4V3dgyN8IA9v5fgqrtAMIvD+MsRcS0qWw="
+    secure: jG/9PGMNWHPhYbGZTYf7srHOuU3nmf1L5nGN9TTtPSMIhtI/IXs9mUJESAcK+umHIZLpyV9onZPnLhGw+xbiCLyheCsiBpCUsQoANCCXYu2/e3QxHzwcBdmtET2zrsOHy31GpASgBu+zkrbY2Pz0lgk1Kg+jdLlHWOifO1qTc9k=
   bucket: bouzuya.net
   region: ap-northeast-1
   endpoint: s3-ap-northeast-1.amazonaws.com
