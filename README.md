@@ -1,6 +1,6 @@
 # bouzuya.net
 
-[bouzuya.net](http://bouzuya.net/) is bouzuya's web site.
+[bouzuya.net](https://bouzuya.net/) is bouzuya's web site.
 
 # bouzuya colors
 
