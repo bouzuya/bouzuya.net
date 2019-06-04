@@ -2,14 +2,11 @@
   "name": "bouzuya.net",
   "description": "bouzuya's web site.",
   "version": "2.3.3",
-  "author": {
-    "name": "bouzuya",
-    "email": "m@bouzuya.net",
-    "url": "https://bouzuya.net/"
-  },
+  "author": "bouzuya <m@bouzuya.net> (https://bouzuya.net/)",
   "bugs": {
     "url": "https://github.com/bouzuya/bouzuya.net/issues"
   },
+  "dependencies": {},
   "devDependencies": {
     "b-html-cli": "0.3.1",
     "clean-css-cli": "^4.3.0",
@@ -24,10 +21,11 @@
     "bouzuya"
   ],
   "license": "MIT",
+  "main": "index.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/bouzuya/bouzuya.net"
+    "url": "git://github.com/bouzuya/bouzuya.net.git"
   },
   "scripts": {
     "build": "npm-run-all -s 'clean' -p 'build:bhtml' 'build:styl' -s 'build:css'",
