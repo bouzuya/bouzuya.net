@@ -24,6 +24,7 @@
     "bouzuya"
   ],
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/bouzuya/bouzuya.net"
