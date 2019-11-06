@@ -140,8 +140,8 @@
           <a
             @accesskey h
             @class hatena-button
-            @href http://hatena.ne.jp/bouzuya/
-            @title hatena.ne.jp/bouzuya
+            @href https://profile.hatena.ne.jp/bouzuya/
+            @title hatena.ne.jp bouzuya
             <i
               @class icon fa fa-hatena
             <span
