@@ -36,7 +36,7 @@
     "prebuild": "mkdirp public/styles",
     "prepublish": "npm-run-all -s 'clean' 'build'",
     "watch": "npm-run-all -p 'watch:bhtml' 'watch:styl'",
-    "watch:bhtml": "watch --wait 2 'npm-run-all -s \"build:bhtml\" \"watch:reload\"' './src/'",
-    "watch:styl": "watch --wait 2 'npm-run-all -s \"build:styl\" \"watch:reload\"' './src/styles/'"
+    "watch:bhtml": "watch --wait 2 'npm-run-all -s \"build:bhtml\"' './src/'",
+    "watch:styl": "watch --wait 2 'npm-run-all -s \"build:styl\"' './src/styles/'"
   }
 }
