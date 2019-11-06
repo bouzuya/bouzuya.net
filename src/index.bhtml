@@ -149,6 +149,20 @@
               <span
                 @class text
                 >Hatena
+        <li
+          @class social
+          <a
+            @accesskey p
+            @class android-button
+            @href https://play.google.com/store/apps/developer?id=bouzuya
+            @title play.google.com bouzuya
+            <i
+              @class icon fa fa-android
+            <span
+              @class label
+              <span
+                @class text
+                >Android™
     <footer
       @class root-footer
       <p

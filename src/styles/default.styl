@@ -73,15 +73,15 @@ a
       dark-color()
 
 .copyright
-  dark-color()
+  light-color()
 
   font-size 6vh
 
   a
-    dark-color()
+    light-color()
 
     &::after
-      light-color()
+      dark-color()
 
 .about
   dark-color()
@@ -141,13 +141,16 @@ a
 .hatena-button
   light-button()
 
+.android-button
+  dark-button()
+
 .fa-hatena:before
   content "\f128"
 
 .copyright-name
-  dark-color()
+  light-color()
 
   display inline
 
   &:focus, &:hover, &:active
-    dark-color()
+    light-color()
