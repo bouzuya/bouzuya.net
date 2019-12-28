@@ -152,6 +152,20 @@
         <li
           @class social
           <a
+            @accesskey n
+            @class npm-button
+            @href https://www.npmjs.com/~bouzuya
+            @title npmjs.com bouzuya
+            <i
+              @class icon fab fa-npm
+            <span
+              @class label
+              <span
+                @class text
+                >npm
+        <li
+          @class social
+          <a
             @accesskey p
             @class google-play-button
             @href https://play.google.com/store/apps/developer?id=bouzuya
