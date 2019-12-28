@@ -11,6 +11,7 @@
 - clean-css (CSS Minifier)
 - stylus (AltCSS)
 - npm-scripts (Task Runner)
+- font-awesome (Icon Font)
 
 ## bouzuya colors
 
