@@ -2,29 +2,39 @@
 
 [bouzuya.net](https://bouzuya.net/) is bouzuya's web site.
 
-# bouzuya colors
+## Note
 
-## version: 1.0.0
+- Amazon CloudFront (CDN)
+- Amazon S3 (File Store)
+- Travis CI (CI)
+- b-html (HTML Template)
+- clean-css (CSS Minifier)
+- stylus (AltCSS)
+- npm-scripts (Task Runner)
 
-### bouzuya green
+## bouzuya colors
+
+### version: 1.0.0
+
+#### bouzuya green
 
 - `#4e6a41`
 - `rgb(78, 106, 65)`
 - `hsl(101, 24%, 34%)`
 
-### bouzuya white
+#### bouzuya white
 
 - `hsl(101, 24%, 94%)`
 
-## version: 2.0.0
+### version: 2.0.0
 
-### bouzuya-white
+#### bouzuya-white
 
 - `#f4f7f2`
 - `rgb(244, 247, 242)`
 - `hsl(100, 23%, 96%)`
 
-### bouzuya-green
+#### bouzuya-green
 
 - `#4e6a41`
 - `rgb(78, 106, 65)`
