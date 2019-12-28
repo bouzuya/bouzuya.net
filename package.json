@@ -34,7 +34,7 @@
     "build:styl": "stylus './src/styles/default.styl' -o './public/styles/'",
     "clean": "rimraf './public/*.html' './public/styles/*.css'",
     "prebuild": "mkdirp public/styles",
-    "prepublish": "npm-run-all -s 'clean' 'build'",
+    "prepare": "npm-run-all -s 'clean' 'build'",
     "watch": "npm-run-all -p 'watch:bhtml' 'watch:styl'",
     "watch:bhtml": "watch --wait 2 'npm-run-all -s \"build:bhtml\"' './src/'",
     "watch:styl": "watch --wait 2 'npm-run-all -s \"build:styl\"' './src/styles/'"
