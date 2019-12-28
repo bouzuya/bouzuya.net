@@ -1,13 +1,13 @@
 sudo: required
 services:
-- docker
+  - docker
 language: node_js
 node_js:
-- '8.10'
+  - "10"
 after_success:
-- docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-- docker build -t bouzuya/bouzuya.net .
-- docker push bouzuya/bouzuya.net
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker build -t bouzuya/bouzuya.net .
+  - docker push bouzuya/bouzuya.net
 deploy:
   provider: s3
   access_key_id:
