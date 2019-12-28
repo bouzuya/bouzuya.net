@@ -1,3 +1,4 @@
-node_modules/
-public/*.html
-public/styles/*.css
+/node_modules/
+/public/*.html
+/public/styles/*.css
+/public/styles/font-awesome/
