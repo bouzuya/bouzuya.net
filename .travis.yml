@@ -4,6 +4,8 @@ services:
 language: node_js
 node_js:
   - "10"
+script:
+  - ./setup-font-awesome.sh
 after_success:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker build -t bouzuya/bouzuya.net .
