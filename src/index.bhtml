@@ -94,8 +94,8 @@
           <a
             @accesskey m
             @class mail-button
-            @href mailto:mail@bouzuya.net
-            @title mail@bouzuya.net
+            @href mailto:m@bouzuya.net
+            @title m@bouzuya.net
             <i
               @class icon far fa-envelope
             <span
@@ -103,7 +103,7 @@
               <span
                 @class text
                 <address
-                  >mail@bouzuya.net
+                  >m@bouzuya.net
     <section
       @class socials
       <ul
