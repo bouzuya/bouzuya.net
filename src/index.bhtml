@@ -80,7 +80,7 @@
           <a
             @accesskey b
             @class blog-button
-            @href http://blog.bouzuya.net
+            @href https://blog.bouzuya.net/
             @title blog.bouzuya.net
             <i
               @class icon fas fa-pencil-alt
