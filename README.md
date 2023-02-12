@@ -6,7 +6,7 @@
 
 - Amazon CloudFront (CDN)
 - Amazon S3 (File Store)
-- Travis CI (CI)
+- GitHub Actions (CI)
 - b-html (HTML Template)
 - clean-css (CSS Minifier)
 - stylus (AltCSS)
@@ -40,6 +40,3 @@
 - `#4e6a41`
 - `rgb(78, 106, 65)`
 - `hsl(100, 23%, 33.6%)`
-
-
-[![Build Status](https://travis-ci.org/bouzuya/bouzuya.net.svg)](https://travis-ci.org/bouzuya/bouzuya.net)
