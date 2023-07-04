@@ -64,7 +64,7 @@
           <a
             @accesskey (
             @class about-button
-            @href https://twitter.com/bouzuya/
+            @href https://github.com/bouzuya/
             @title bouzuya
             <img
               @alt bouzuya
@@ -107,20 +107,6 @@
     <section
       @class socials
       <ul
-        <li
-          @class social
-          <a
-            @accesskey t
-            @class twitter-button
-            @href https://twitter.com/bouzuya/
-            @title twitter.com/bouzuya
-            <i
-              @class icon fab fa-twitter
-            <span
-              @class label
-              <span
-                @class text
-                >Twitter
         <li
           @class social
           <a
@@ -185,6 +171,6 @@
         <a
           @accesskey @
           @class copyright-name
-          @href https://twitter.com/bouzuya/
+          @href https://github.com/bouzuya/
           >bouzuya
         >&nbsp;2021
