@@ -167,10 +167,10 @@
       @class root-footer
       <p
         @class copyright
-        >&copy;&nbsp;
+        >&copy;&nbsp;2013&nbsp;
         <a
           @accesskey @
           @class copyright-name
           @href https://github.com/bouzuya/
           >bouzuya
-        >&nbsp;2021
+        >
