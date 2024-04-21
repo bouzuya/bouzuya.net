@@ -149,20 +149,6 @@
               <span
                 @class text
                 >npm
-        <li
-          @class social
-          <a
-            @accesskey p
-            @class google-play-button
-            @href https://play.google.com/store/apps/developer?id=bouzuya
-            @title play.google.com bouzuya
-            <i
-              @class icon fab fa-google-play
-            <span
-              @class label
-              <span
-                @class text
-                >Google Play
     <footer
       @class root-footer
       <p
