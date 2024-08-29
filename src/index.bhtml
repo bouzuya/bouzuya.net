@@ -121,34 +121,6 @@
               <span
                 @class text
                 >GitHub
-        <li
-          @class social
-          <a
-            @accesskey h
-            @class hatena-button
-            @href https://profile.hatena.ne.jp/bouzuya/
-            @title hatena.ne.jp bouzuya
-            <i
-              @class icon fas fa-hatena
-            <span
-              @class label
-              <span
-                @class text
-                >Hatena
-        <li
-          @class social
-          <a
-            @accesskey n
-            @class npm-button
-            @href https://www.npmjs.com/~bouzuya
-            @title npmjs.com bouzuya
-            <i
-              @class icon fab fa-npm
-            <span
-              @class label
-              <span
-                @class text
-                >npm
     <footer
       @class root-footer
       <p
